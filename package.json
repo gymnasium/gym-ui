@@ -1,0 +1,62 @@
+{
+  "name": "@gymnasium/gym-ui",
+  "version": "0.0.2",
+  "description": "React UI Component Library used by Gymnasium sites and tools",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "test": "npm test",
+    "lint": "eslint src --ext .jsx,.js,.tsx,.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gymnasium/gym-ui.git"
+  },
+  "keywords": [
+    "gymnasium",
+    "ui",
+    "library",
+    "gym-ui",
+    "react"
+  ],
+  "author": "Mike Bifulco <mbifulco@aquent.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/gymnasium/gym-ui/issues"
+  },
+  "homepage": "https://github.com/gymnasium/gym-ui#readme",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-config-react-app": "^5.0.1",
+    "eslint-plugin-flowtype": "^3.13.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "prettier": "1.18.2",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.6.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
