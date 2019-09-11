@@ -1,5 +1,6 @@
 import React from 'react';
 
-export const Button = () => {
-  return <button />;
-};
+const Button: React.FunctionComponent = (): React.ReactElement => (
+  <button type="button" />
+);
+export default Button;
