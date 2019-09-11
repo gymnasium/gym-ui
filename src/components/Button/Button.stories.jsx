@@ -4,4 +4,6 @@ import { storiesOf } from '@storybook/react';
 
 import Button from './Button';
 
-storiesOf('Button', module).addWithJSX('Simple', () => <Button />);
+storiesOf('Button', module).addWithJSX('from component folder', () => (
+  <Button />
+));
