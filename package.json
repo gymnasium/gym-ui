@@ -1,12 +1,17 @@
 {
   "name": "@gymnasium/gym-ui",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "React UI Component Library used by Gymnasium sites and tools",
-  "main": "index.js",
+  "main": "dist/index",
+  "typings": "dist/index",
   "scripts": {
     "prettier": "prettier --write src/**/*.{js,jsx,ts,tsx}",
-    "test": "npm test",
-    "lint": "eslint src --ext .jsx,.js,.tsx,.ts"
+    "lint": "eslint src --ext .jsx,.js,.tsx,.ts",
+    "release": "npm publish --access public",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "clean": "rm -rf dist",
+    "watch": "tsc -w -p ."
   },
   "repository": {
     "type": "git",
@@ -58,5 +63,11 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "files": [
+    "dist/index.d.ts",
+    "dist/index.js",
+    "dist/index.js.map",
+    "dist/components"
+  ]
 }
