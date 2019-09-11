@@ -33,5 +33,11 @@ module.exports = {
       },
     ],
     '@typescript-eslint/indent': [2, 2],
+    'comma-dangle': [
+      'error',
+      {
+        functions: 'never',
+      },
+    ],
   },
 };

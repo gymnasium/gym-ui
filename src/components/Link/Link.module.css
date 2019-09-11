@@ -1,0 +1,9 @@
+.link {
+  text-decoration: none;
+  color: var(--gym-orange);
+}
+
+.link:hover {
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
