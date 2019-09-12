@@ -5,7 +5,7 @@ import { color } from '../../colors';
 
 const style = css`
   text-decoration: none;
-  color: ${color['gym-orange']};
+  color: ${color.orange};
   :hover {
     text-decoration: none;
     border-bottom: 1px solid;
