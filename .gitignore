@@ -1,4 +1,9 @@
+# directory storybook builds to
+storybook-static 
+
+# directory typescript builds to
 dist 
+
 # Created by https://www.gitignore.io/api/node,code,macos,windows
 # Edit at https://www.gitignore.io/?templates=node,code,macos,windows
 
