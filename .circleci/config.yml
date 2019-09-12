@@ -33,11 +33,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn prettier
-      - run: yarn lint
-      - run: yarn clean
-      - run: yarn compile
-      - run: yarn build-storybook
+      - run: npm run prettier
+      - run: npm run lint
+      - run: npm run clean
+      - run: npm run compile
+      - run: npm run build-storybook
 
       - store_artifacts:
           path: ~/gym-ui/artifacts
