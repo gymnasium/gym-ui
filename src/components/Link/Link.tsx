@@ -18,18 +18,9 @@ interface LinkProps {
 }
 
 const Link = ({ children, to = '#' }: LinkProps): React.ReactElement => (
-  // <a className={classes.link} href={to}>
   <a css={style} href={to}>
     {children}
   </a>
 );
-
-// Link.defaultProps = {
-//   to: '#',
-// };
-
-// Link.propTypes = {
-//   to: PropTypes.string,
-// };
 
 export default Link;
