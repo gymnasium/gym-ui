@@ -1,3 +1,5 @@
+import path from 'path';
+
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
@@ -22,13 +24,28 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.css$/,
+      //   exclude: /node_modules/,
+      //   loader: ExtractTextPlugin.extract(
+      //     'style-loader',
+      //     'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+      //   ),
+      // },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract(
+        // include: path.join(__dirname, 'src'),
+        use: [
           'style-loader',
-          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-        ),
+          {
+            loader: 'typings-for-css-modules-loader',
+            options: {
+              modules: true,
+              namedExport: true,
+              camelCase: true,
+            },
+          },
+        ],
       },
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       {
