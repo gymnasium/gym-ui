@@ -21,7 +21,16 @@ module.exports = {
     ],
     'import/no-extraneous-dependencies': [
       2,
-      { devDependencies: ['**/test.tsx', '**/test.ts'] },
+      {
+        devDependencies: [
+          '**/test.tsx',
+          '**/test.ts',
+          '**/*.stories.js',
+          '**/*.stories.ts',
+          '**/*.stories.jsx',
+          '**/*.stories.tsx',
+        ],
+      },
     ],
     '@typescript-eslint/indent': [2, 2],
   },
