@@ -26,18 +26,18 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn prettier
-      - run: yarn lint
-      - run: yarn clean
-      - run: yarn compile
-      - run: yarn build-storybook
+      - run: npm run prettier
+      - run: npm run lint
+      - run: npm run clean
+      - run: npm run compile
+      - run: npm run build-storybook
 
       - store_artifacts:
           path: ~/gym-ui/artifacts

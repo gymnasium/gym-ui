@@ -1,16 +1,13 @@
-===== NOTE: For all issues, please include:
-
 # Description
 
-# Screenshots / Mockups
+## Screenshots / Mockups
 
 ![here]()
 
 ===== NOTE: if this is a bug report, also include the following:
 
-# Steps To Reproduce
+## Steps To Reproduce
 
-1.
+1. ex
 
-
-# Expected result
+## Expected result
