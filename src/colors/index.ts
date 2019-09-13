@@ -31,6 +31,6 @@ export const color = {
 
 export const typeface = {
   /* typefaces */
-  title: "brandon-grotesque, 'Helvetica Neue', Helvetica, sans-serif",
-  text: "'Helvetica Neue', Helvetica, sans-serif",
+  title: 'brandon-grotesque, Helvetica Neue, Helvetica, sans-serif',
+  text: 'Helvetica Neue, Helvetica, sans-serif',
 };
