@@ -3,6 +3,10 @@ export const color = {
   orange: '#f8971d',
   black: '#222222',
   white: '#ffffff',
+  red: '#d73158',
+  purple: '#6f519a',
+  green: '#4e965f',
+  teal: '#6ca3a0',
   grey: {
     50: '#fafafa',
     100: '#f5f5f5',
