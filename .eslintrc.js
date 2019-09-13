@@ -4,10 +4,11 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
   ],
   parser: '@typescript-eslint/parser',
-  plugins: ['jsx-a11y', '@typescript-eslint', 'prettier'],
+  plugins: ['jsx-a11y', '@typescript-eslint', 'prettier', 'emotion'],
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
@@ -19,7 +20,8 @@ module.exports = {
     },
   },
   rules: {
-    'react/require-default-props': 2,
+    'emotion/jsx-import': 'error',
+
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
@@ -37,7 +39,6 @@ module.exports = {
         ],
       },
     ],
-    '@typescript-eslint/indent': [2, 2],
     'comma-dangle': [
       'error',
       {
