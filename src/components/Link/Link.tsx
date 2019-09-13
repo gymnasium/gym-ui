@@ -38,8 +38,8 @@ const Link: React.FunctionComponent<Props> = ({
   children,
   to,
   dark = false,
-  rel = '',
-  target = '',
+  rel = undefined,
+  target = undefined,
 }: Props): React.ReactElement => (
   <a css={dark ? styleDark : styleLight} href={to} rel={rel} target={target}>
     {children}
