@@ -10,9 +10,9 @@ storiesOf('Link', module)
     'default (light)',
     (): React.ReactElement => (
       <>
-        <Link>This is a link on a light background</Link>
+        <Link to="/">This is a link on a light background</Link>
         <div style={{ backgroundColor: color.black }}>
-          <Link>This is a link on a dark background</Link>
+          <Link to="/"> This is a link on a dark background</Link>
         </div>
       </>
     )
@@ -22,9 +22,29 @@ storiesOf('Link', module)
     (): React.ReactElement => (
       <>
         <div style={{ backgroundColor: color.black }}>
-          <Link dark>This is a dark link on a dark background</Link>
+          <Link to="/" dark>
+            This is a dark link on a dark background
+          </Link>
         </div>
-        <Link dark>This is a dark link on a light background</Link>
+        <Link to="/" dark>
+          This is a dark link on a light background
+        </Link>
       </>
+    )
+  )
+  .addWithJSX(
+    'with target',
+    (): React.ReactElement => (
+      <Link target="_blank" to="/">
+        This link opens a new tab or window
+      </Link>
+    )
+  )
+  .addWithJSX(
+    'with rel attribute e.g. noopener noreferrer',
+    (): React.ReactElement => (
+      <Link to="/" rel="noopener noreferrer">
+        This link includes rel=&quot;noopener noreferrer&quot;
+      </Link>
     )
   );
