@@ -22,6 +22,7 @@ const style = css`
     list-style: disc;
     color: ${color.orange};
     margin-top: 0.3em;
+    margin-left: 0;
 
     > span {
       font: 1em/1.4 ${typeface.text};
