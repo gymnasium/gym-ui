@@ -14,7 +14,6 @@ const Card: React.FunctionComponent<Props> = ({
   const style = css`
     background-color: ${color.white};
     border: 1px solid ${color.grey.regular};
-    border-radius: 7px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
