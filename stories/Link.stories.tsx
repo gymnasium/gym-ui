@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Link } from '../src';
-import { color } from '../src/colors';
+import { color } from '../src/styles';
 
 storiesOf('Link', module)
   .addWithJSX(
