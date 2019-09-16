@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color, typeface } from '../../colors';
+import { color, typeface } from '../../styles';
 
 const styleLight = css`
   text-decoration: none;

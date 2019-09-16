@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color } from '../../colors';
+import { color } from '../../styles';
 
 interface Props {
   children: React.ReactNode;

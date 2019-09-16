@@ -3,7 +3,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import { Card } from '../src';
-import { typeface, color } from '../src/colors';
+import { typeface, color } from '../src/styles';
 
 storiesOf('Card', module)
   .addWithJSX(
