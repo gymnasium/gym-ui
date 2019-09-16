@@ -2,6 +2,8 @@ module.exports = {
   extends: [
     'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
     'plugin:jsx-a11y/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -10,11 +12,14 @@ module.exports = {
     'import/parsers': {
       '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
-    // 'import/resolver': {
-    //   typescript: {},
-    // },
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
   rules: {
+    'react/require-default-props': 2,
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },

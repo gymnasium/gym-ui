@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../colors';
-// import classes from './Link.module.css';
 
 const styleLight = css`
   text-decoration: none;
@@ -27,18 +26,21 @@ const styleDark = css`
   }
 `;
 
-interface LinkProps {
-  children: React.ReactChild;
-  to?: string;
+interface Props {
+  children: React.ReactNode;
+  to: string;
   dark?: boolean;
+  rel?: string;
+  target?: string;
 }
 
-const Link = ({
+const Link: React.FunctionComponent<Props> = ({
   children,
-  to = '#',
+  to,
   dark = false,
-}: LinkProps): React.ReactElement => (
-  <a css={dark ? styleDark : styleLight} href={to}>
+  ...rest
+}: Props): React.ReactElement => (
+  <a css={dark ? styleDark : styleLight} href={to} {...rest}>
     {children}
   </a>
 );
