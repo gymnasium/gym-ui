@@ -13,7 +13,7 @@ const Card: React.FunctionComponent<Props> = ({
 }: Props): React.ReactElement => {
   const style = css`
     background-color: ${color.white};
-    border: 10px solid ${color.grey.lightPageBackground};
+    border: 1px solid ${color.grey.regular};
     border-radius: 7px;
     display: flex;
     flex-direction: row;
