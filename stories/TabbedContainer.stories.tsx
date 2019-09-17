@@ -17,7 +17,10 @@ storiesOf('TabbedContainer', module).addWithJSX(
           <br />
           <br />
         </div>
-        <TabbedContainer title={title}>
+        <TabbedContainer title="Tab 1">111</TabbedContainer>
+        <TabbedContainer title="Tab 2">222</TabbedContainer>
+
+        <TabbedContainer title={`${title} - Tab 3`}>
           <section className="row how-gymnasium-works">
             <div className="col-md-3 col-sm-6 col-xs-12">
               <h2>Free Online Courses</h2>
@@ -113,6 +116,8 @@ storiesOf('TabbedContainer', module).addWithJSX(
             </section>
           </div>
         </TabbedContainer>
+        <TabbedContainer title="Tab 4">444</TabbedContainer>
+
         <div style={{ backgroundColor: color.purple }}>
           <br />
           Content After
