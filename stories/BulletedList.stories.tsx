@@ -2,34 +2,46 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { BulletedList } from '../src';
-import { color } from '../src/styles';
+import { BulletedList, ListItem } from '../src';
 
 storiesOf('BulletedList', module)
   .addWithJSX(
     'with title',
     (): React.ReactElement => {
       const title = 'Skills covered';
-      const data = [
-        'HTML basics',
-        'CSS basics',
-        'Bootstrap basics',
-        'And more...',
-      ];
-
-      return <BulletedList title={title} data={data} />;
+      return (
+        <BulletedList title={title}>
+          <ListItem>HTML basics</ListItem>
+          <ListItem>CSS basics</ListItem>
+          <ListItem>Bootstrap basics</ListItem>
+          <ListItem>And more...</ListItem>
+        </BulletedList>
+      );
     }
   )
   .addWithJSX(
     'without title',
-    (): React.ReactElement => {
-      const data = [
-        'HTML basics',
-        'CSS basics',
-        'Bootstrap basics',
-        'And more...',
-      ];
-
-      return <BulletedList data={data} />;
-    }
+    (): React.ReactElement => (
+      <BulletedList>
+        <ListItem>HTML basics</ListItem>
+        <ListItem>CSS basics</ListItem>
+        <ListItem>Bootstrap basics</ListItem>
+        <ListItem>And more...</ListItem>
+      </BulletedList>
+    )
+  )
+  .addWithJSX(
+    'with internal markup',
+    (): React.ReactElement => (
+      <BulletedList>
+        <ListItem>Some content Here</ListItem>
+        <ListItem>
+          with <em>any</em> amount of markup added should <u>render</u>
+        </ListItem>
+        <ListItem>
+          <p>even with a few block type elements</p>
+          <p>within</p>
+        </ListItem>
+      </BulletedList>
+    )
   );

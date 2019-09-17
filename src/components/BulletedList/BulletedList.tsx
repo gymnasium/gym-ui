@@ -10,50 +10,27 @@ const style = css`
   margin-bottom: 0.6em;
   margin-left: 1.2em;
   margin-top: 1em;
-
-  > dt {
-    font: 900 1em/1.2 ${typeface.title};
-    text-transform: uppercase;
-    margin-bottom: 0.6em;
-  }
-
-  > dd {
-    display: list-item;
-    list-style: disc;
-    color: ${color.orange};
-    margin-top: 0.3em;
-    margin-left: 0;
-
-    > span {
-      font: 1em/1.4 ${typeface.text};
-      color: ${color.black};
-    }
-  }
+`;
+const titleStyle = css`
+  font: 900 1em/1.2 ${typeface.title};
+  text-transform: uppercase;
+  margin-bottom: 0.6em;
 `;
 
 interface Props {
   title?: string;
-  data: string[];
+  children: React.ReactNode;
 }
 
 const BulletedList: React.FunctionComponent<Props> = ({
   title = '',
-  data,
+  children,
 }: Props): React.ReactElement => {
   return (
-    <dl css={style}>
-      {title && <dt>{title}</dt>}
-      {data &&
-        data.map(
-          (dataItem): React.ReactElement => {
-            return (
-              <dd key={dataItem}>
-                <span>{dataItem}</span>
-              </dd>
-            );
-          }
-        )}
-    </dl>
+    <ul css={style}>
+      {title && <div css={titleStyle}>{title}</div>}
+      {children}
+    </ul>
   );
 };
 

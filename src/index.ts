@@ -5,5 +5,15 @@ import Title from './components/Title';
 import Subtitle from './components/Subtitle';
 import GymButton from './components/GymButton';
 import BulletedList from './components/BulletedList';
+import ListItem from './components/ListItem';
 
-export { Button, Link, Card, Title, Subtitle, GymButton, BulletedList };
+export {
+  Button,
+  Link,
+  Card,
+  Title,
+  Subtitle,
+  GymButton,
+  BulletedList,
+  ListItem,
+};
