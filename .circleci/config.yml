@@ -39,16 +39,6 @@ jobs:
       - store_artifacts:
           path: ~/gym-ui/artifacts
 
-  run_tests:
-    docker:
-      - image: circleci/node:8.15.1
-    working_directory: ~/gym-ui
-    parallelism: 3
-    steps:
-      - checkout
-      - attach_workspace:
-          at: .
-
 workflows:
   build_and_test:
     jobs:
