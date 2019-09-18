@@ -1,6 +1,9 @@
 import { configure, setAddon } from '@storybook/react';
 import JSXAddon from 'storybook-addon-jsx';
 
+// UI Testing with Chromatic
+import 'storybook-chromatic';
+
 setAddon(JSXAddon);
 
 // automatically import all files ending in *.stories.js

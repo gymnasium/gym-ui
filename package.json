@@ -13,7 +13,8 @@
     "clean": "rm -rf dist",
     "watch": "tsc -w -p .",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": " chromatic test --exit-zero-on-changes"
   },
   "repository": {
     "type": "git",
@@ -71,6 +72,7 @@
     "prettier": "1.18.2",
     "source-map-loader": "^0.2.4",
     "storybook-addon-jsx": "^7.1.6",
+    "storybook-chromatic": "^2.2.2",
     "ts-loader": "^6.0.4",
     "typescript": "^3.6.3",
     "webpack": "^4.40.2",
