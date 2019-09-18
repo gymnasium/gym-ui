@@ -6,13 +6,10 @@ import { FeaturedContent } from '../src';
 import { typeface, color } from '../src/styles';
 
 storiesOf('FeaturedContent', module).addWithJSX(
-  'with simple content',
+  'example',
   (): React.ReactElement => (
-    <FeaturedContent>
-      <div>
-        <p>Hi</p>
-        <p style={{ backgroundColor: color.teal }}>Full width simple content</p>
-      </div>
-    </FeaturedContent>
+    <div style={{ width: '350px' }}>
+      <FeaturedContent title="web design & development">ZZZ</FeaturedContent>
+    </div>
   )
 );
