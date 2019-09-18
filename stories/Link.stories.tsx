@@ -33,9 +33,9 @@ storiesOf('Link', module)
     )
   )
   .addWithJSX(
-    'with target',
+    'with target and title',
     (): React.ReactElement => (
-      <Link target="_blank" to="/">
+      <Link target="_blank" to="/" title="Go home">
         This link opens a new tab or window
       </Link>
     )

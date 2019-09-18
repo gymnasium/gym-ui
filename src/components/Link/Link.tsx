@@ -32,6 +32,7 @@ interface Props {
   dark?: boolean;
   rel?: string;
   target?: string;
+  title?: string;
 }
 
 const Link: React.FunctionComponent<Props> = ({

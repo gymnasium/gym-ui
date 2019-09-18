@@ -31,7 +31,13 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
 
     section {
       background-color: ${backgroundColor};
-      padding: 0 1rem;
+      padding: 0 1rem 1rem 1rem;
+      color: ${color.white};
+      font-family: ${typeface.text};
+    }
+
+    footer {
+      padding: 1rem 1rem;
     }
   `;
 
@@ -39,34 +45,8 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
     <article css={style} className="card featured-course user-experience">
       <header>{strongHeader ? <H2>{title}</H2> : <H3>{title}</H3>}</header>
 
-      <section>
-        <div className="mask">
-          <a
-            href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about"
-            title="Learn More"
-          >
-            <img
-              alt="Modern Web Design"
-              srcSet="https://gymcms.xyz/img/course-artwork/svg/gym-107.svg"
-              src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png"
-              width="256"
-            />
-          </a>
-        </div>
-        <h2>
-          <a
-            href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about"
-            title="Learn More"
-          >
-            Working With Atomic Design and Pattern Lab
-          </a>
-        </h2>
-        <p>
-          An in-depth look at building successful UI design systems from the
-          author of <cite>Atomic Design</cite>.
-        </p>
-      </section>
-      <div className="card-footer">
+      <section>{children}</section>
+      <footer className="card-footer">
         <div className="card-info">
           <dl className="instructor">
             <dt className="byline">
@@ -83,7 +63,7 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
             <b>Learn More</b>
           </a>
         </div>
-      </div>
+      </footer>
     </article>
   );
 };
