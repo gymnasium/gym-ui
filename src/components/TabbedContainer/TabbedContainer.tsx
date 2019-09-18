@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
-// import { H1 } from '../Headings';
 
 interface Props {
   title?: string;
