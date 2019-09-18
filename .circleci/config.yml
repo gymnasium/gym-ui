@@ -2,18 +2,15 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 2.1
+
+orbs:
+  percy: percy/agent@0.1.3
+
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:8.15.1
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
     working_directory: ~/gym-ui
 
     steps:
@@ -41,3 +38,21 @@ jobs:
 
       - store_artifacts:
           path: ~/gym-ui/artifacts
+
+  run_tests:
+    docker:
+      - image: circleci/node:8.15.1
+    working_directory: ~/gym-ui
+    parallelism: 3
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+      - percy/finalize_all:
+          requires:
+            - build
