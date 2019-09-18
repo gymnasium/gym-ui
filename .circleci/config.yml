@@ -35,6 +35,7 @@ jobs:
       - run: npm run clean
       - run: npm run compile
       - run: npm run build-storybook
+      - run: npm run percy-storybook
 
       - store_artifacts:
           path: ~/gym-ui/artifacts
