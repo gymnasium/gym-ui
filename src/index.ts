@@ -6,6 +6,7 @@ import BulletedList from './components/BulletedList';
 import ListItem from './components/ListItem';
 import TabbedContainer from './components/TabbedContainer';
 import { H1, H2, H3, H4 } from './components/Headings';
+import FeaturedContent from './components/FeaturedContent';
 
 export {
   Button,
@@ -19,4 +20,5 @@ export {
   H2,
   H3,
   H4,
+  FeaturedContent,
 };
