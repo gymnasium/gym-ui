@@ -7,12 +7,17 @@ import { color } from '../src/styles';
 
 storiesOf('Link', module)
   .addWithJSX(
-    'default (light)',
+    'default',
     (): React.ReactElement => (
       <>
-        <Link to="/">This is a link on a light background</Link>
+        <Link to="/">This is the default link on a light background</Link>
+        <br />
+        <br />
         <div style={{ backgroundColor: color.black }}>
-          <Link to="/"> This is a link on a dark background</Link>
+          <br />
+          <Link to="/"> This is the default link on a dark background</Link>
+          <br />
+          <br />
         </div>
       </>
     )
@@ -21,14 +26,27 @@ storiesOf('Link', module)
     'dark',
     (): React.ReactElement => (
       <>
-        <div style={{ backgroundColor: color.black }}>
-          <Link to="/" dark>
-            This is a dark link on a dark background
+        <div style={{ backgroundColor: color.white }}>
+          <Link to="/" isDark>
+            This is a dark link
           </Link>
         </div>
-        <Link to="/" dark>
-          This is a dark link on a light background
-        </Link>
+      </>
+    )
+  )
+  .addWithJSX(
+    'light',
+    (): React.ReactElement => (
+      <>
+        <div style={{ backgroundColor: color.black }}>
+          <br />
+          <br />
+          <Link to="/" isLight>
+            This is a light link
+          </Link>
+          <br />
+          <br />
+        </div>
       </>
     )
   )
