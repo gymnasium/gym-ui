@@ -3,32 +3,33 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import { GymButton } from '../src';
+import { Button } from '../src';
 import { color } from '../src/styles';
 
 const onClickAction = action('Button clicked');
 
-storiesOf('GymButton', module)
+storiesOf('Button', module)
+  .addParameters({
+    component: Button,
+  })
   .addWithJSX(
     'default',
-    (): React.ReactElement => (
-      <GymButton onClick={onClickAction}>Default</GymButton>
-    )
+    (): React.ReactElement => <Button onClick={onClickAction}>Default</Button>
   )
   .addWithJSX(
     'full width',
     (): React.ReactElement => (
-      <GymButton fullWidth onClick={onClickAction}>
+      <Button fullWidth onClick={onClickAction}>
         Full Width
-      </GymButton>
+      </Button>
     )
   )
   .addWithJSX(
     'all caps',
     (): React.ReactElement => (
-      <GymButton allCaps onClick={onClickAction}>
+      <Button allCaps onClick={onClickAction}>
         all caps
-      </GymButton>
+      </Button>
     )
   )
   .addWithJSX(
@@ -40,9 +41,9 @@ storiesOf('GymButton', module)
           padding: '10px',
         }}
       >
-        <GymButton lightBorder onClick={onClickAction}>
+        <Button lightBorder onClick={onClickAction}>
           Light Border
-        </GymButton>
+        </Button>
       </div>
     )
   )

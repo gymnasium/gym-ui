@@ -7,6 +7,7 @@ import { color } from '../src/styles';
 
 storiesOf('UserLogoutMenu', module)
   .addParameters({
+    component: UserLogoutMenu,
     backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
   })
   .addWithJSX(

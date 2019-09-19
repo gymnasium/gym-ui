@@ -3,12 +3,30 @@ import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
 interface Props {
+  /**
+   * Content to render within the component
+   */
   children?: React.ReactNode;
+  /**
+   * Set to true to make this button span the width of its parent
+   */
   fullWidth?: boolean;
+  /**
+   * Set to true to add a text-transform: uppercase; rule to this button's css
+   */
   allCaps?: boolean;
+  /**
+   * Set to true to give this button a light-colored border
+   */
   lightBorder?: boolean;
-  to?: string;
+  /**
+   * Event fired when this button is clicked
+   */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
+  /**
+   * URL to set the button as an anchor/hyperlink
+   */
+  to?: string;
 }
 
 const Button: React.FunctionComponent<Props> = ({
