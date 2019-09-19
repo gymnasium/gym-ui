@@ -7,6 +7,8 @@ import { H2, H3 } from '../Headings';
 interface Props {
   children: React.ReactNode;
   title: string;
+  footer: React.ReactNode;
+  extra: React.ReactNode;
   backgroundColor?: string;
   strongHeader?: boolean;
 }
@@ -14,16 +16,24 @@ interface Props {
 const FeaturedContent: React.FunctionComponent<Props> = ({
   children,
   title,
+  footer,
+  extra,
   backgroundColor = color.red,
-  strongHeader = false,
+  strongHeader = true,
 }: Props): React.ReactElement => {
-  const style = css`
+  const extraStyle = css`
+    background-color: transparent;
+    padding: 1rem;
+    text-align: center;
+  `;
+
+  const mainStyle = css`
     border: 1px solid ${color.grey.regular};
     border-radius: 3px;
-
+    background-color: ${color.white};
     header {
       padding: 0.01rem 1rem;
-      color: ${strongHeader ? color.black : color.white};
+      color: ${strongHeader ? color.grey.dark : color.white};
       background-color: ${strongHeader ? color.white : backgroundColor};
       text-transform: ${strongHeader && 'uppercase'};
       font-family: ${typeface.title};
@@ -38,33 +48,20 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
 
     footer {
       padding: 1rem 1rem;
+      font-family: ${typeface.text};
+      color: ${color.grey.dark};
     }
   `;
 
   return (
-    <article css={style} className="card featured-course user-experience">
-      <header>{strongHeader ? <H2>{title}</H2> : <H3>{title}</H3>}</header>
-
-      <section>{children}</section>
-      <footer className="card-footer">
-        <div className="card-info">
-          <dl className="instructor">
-            <dt className="byline">
-              <b>with Brad Frost</b>
-            </dt>
-            <dd>Web Designer &amp; Speaker</dd>
-          </dl>
-        </div>
-        <div className="card-cta">
-          <a
-            className="gym-button"
-            href="https://thegymnasium.com/courses/course-v1:GYM+014+0/about"
-          >
-            <b>Learn More</b>
-          </a>
-        </div>
-      </footer>
-    </article>
+    <Fragment>
+      <article css={mainStyle}>
+        <header>{strongHeader ? <H2>{title}</H2> : <H3>{title}</H3>}</header>
+        <section>{children}</section>
+        {footer && <footer>{footer}</footer>}
+      </article>
+      {extra && <article css={extraStyle}>{extra}</article>}
+    </Fragment>
   );
 };
 

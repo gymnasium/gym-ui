@@ -7,6 +7,7 @@ interface Props {
   fullWidth?: boolean;
   allCaps?: boolean;
   lightBorder?: boolean;
+  to?: string;
   onClick?(e: React.MouseEvent<HTMLElement>): void;
 }
 
@@ -16,8 +17,10 @@ const GymButton: React.FunctionComponent<Props> = ({
   allCaps = false,
   lightBorder = false,
   onClick = (): void => {},
+  to = undefined,
 }: Props): React.ReactElement => {
   const style = css`
+    text-decoration: none;
     font: bold 1.4em/1 ${typeface.text};
     background-color: ${color.orange};
     color: ${color.white};
@@ -34,12 +37,22 @@ const GymButton: React.FunctionComponent<Props> = ({
     text-transform: ${allCaps && 'uppercase'};
     width: ${fullWidth && '100%'};
     border: ${lightBorder && `2px solid ${color.white} !important`};
+    transition: all 0.1s linear 0s;
     :hover {
       background-color: ${color.grey.light};
     }
   `;
 
+  if (to)
+    return (
+      // Hyperlink
+      <a css={style} type="button" href={to}>
+        {children}
+      </a>
+    );
+
   return (
+    // Real button
     <button css={style} type="button" onClick={onClick}>
       {children}
     </button>
