@@ -9,6 +9,9 @@ import { color } from '../src/styles';
 const onClickAction = action('Button clicked');
 
 storiesOf('Button', module)
+  .addParameters({
+    component: Button,
+  })
   .addWithJSX(
     'default',
     (): React.ReactElement => <Button onClick={onClickAction}>Default</Button>

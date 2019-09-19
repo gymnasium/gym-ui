@@ -3,9 +3,25 @@ import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
 interface Props {
+  /**
+   * Content to render within the component
+   */
   children?: React.ReactNode;
+  /**
+   * Boolean - set to true to make this button span the width of its parent
+   * @default false
+   */
   fullWidth?: boolean;
+  /**
+   * Boolean - set to true to add a text-transform: uppercase; rule to this button's css
+   * @default false
+   */
   allCaps?: boolean;
+  /**
+   * @description Set to true to give this button a light-colored border
+   * @type boolean
+   *
+   */
   lightBorder?: boolean;
   onClick?(e: React.MouseEvent<HTMLElement>): void;
 }
