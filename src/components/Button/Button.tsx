@@ -31,6 +31,9 @@ interface Props {
   to?: string;
 }
 
+/**
+ * Use `button` for a navigable call to action, or as a trigger for dynamic functionality.
+ */
 const Button: React.FunctionComponent<Props> = ({
   children = null,
   fullWidth = false,
