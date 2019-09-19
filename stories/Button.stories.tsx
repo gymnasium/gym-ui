@@ -49,5 +49,5 @@ storiesOf('Button', module)
   )
   .addWithJSX(
     'hyperlink',
-    (): React.ReactElement => <GymButton to="/">Default</GymButton>
+    (): React.ReactElement => <Button to="/">Link</Button>
   );

@@ -20,11 +20,13 @@ interface Props {
    */
   lightBorder?: boolean;
   /**
-   * Event fired when this button is clicked
+   * Callback for event fired when this button is clicked
    */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
   /**
    * URL to set the button as an anchor/hyperlink
+   * When used, the button is turned into an anchor element
+   * In this case, the onClick callback will not be used
    */
   to?: string;
 }

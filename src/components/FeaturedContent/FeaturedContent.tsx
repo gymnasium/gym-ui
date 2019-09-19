@@ -5,11 +5,29 @@ import { color, typeface } from '../../styles';
 import { H2, H3 } from '../Headings';
 
 interface Props {
+  /**
+   * Content of the main card area
+   */
   children: React.ReactNode;
+  /**
+   * Card title
+   */
   title: string;
+  /**
+   * Content of the footer area of the card
+   */
   footer: React.ReactNode;
+  /**
+   * Extra content to show up under the card main border
+   */
   extra: React.ReactNode;
+  /**
+   * Background color - typically match the background of the image in the card content
+   */
   backgroundColor?: string;
+  /**
+   * The title will be more prominent with distinct size and background color
+   */
   strongHeader?: boolean;
 }
 

@@ -2,11 +2,12 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { FeaturedContent, Link, Separator, GymButton } from '../src';
+import { FeaturedContent, Link, Separator, Button } from '../src';
 import { typeface, color } from '../src/styles';
 
 storiesOf('FeaturedContent', module)
   .addParameters({
+    component: FeaturedContent,
     backgrounds: [
       {
         name: 'Light grey background',
@@ -25,9 +26,9 @@ storiesOf('FeaturedContent', module)
           Web Designer &amp; Speaker
           <Separator />
           <div className="card-cta">
-            <GymButton to="https://thegymnasium.com/courses/course-v1:GYM+014+0/about">
+            <Button to="https://thegymnasium.com/courses/course-v1:GYM+014+0/about">
               Learn More
-            </GymButton>
+            </Button>
           </div>
         </>
       );
