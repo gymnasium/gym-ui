@@ -5,6 +5,9 @@ import { storiesOf } from '@storybook/react';
 import { BulletedList, ListItem } from '../src';
 
 storiesOf('BulletedList', module)
+  .addParameters({
+    component: BulletedList,
+  })
   .addWithJSX(
     'with title',
     (): React.ReactElement => {

@@ -6,6 +6,9 @@ import { Card } from '../src';
 import { typeface, color } from '../src/styles';
 
 storiesOf('Card', module)
+  .addParameters({
+    component: Card,
+  })
   .addWithJSX(
     'with simple content',
     (): React.ReactElement => (
