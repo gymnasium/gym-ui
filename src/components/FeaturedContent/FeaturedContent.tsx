@@ -20,7 +20,7 @@ interface Props {
   /**
    * Extra content to show up under the card main border
    */
-  extra: React.ReactNode;
+  extra?: React.ReactNode;
   /**
    * Background color - typically match the background of the image in the card content
    */
@@ -37,11 +37,11 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
   footer,
   extra,
   backgroundColor = color.red,
-  strongHeader = true,
+  strongHeader = false,
 }: Props): React.ReactElement => {
   const extraStyle = css`
     background-color: transparent;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
   `;
 
@@ -49,6 +49,9 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
     border: 1px solid ${color.grey.regular};
     border-radius: 3px;
     background-color: ${color.white};
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
     header {
       padding: 0.01rem 1rem;
       color: ${strongHeader ? color.grey.dark : color.white};
