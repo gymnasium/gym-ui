@@ -6,6 +6,9 @@ import { Link } from '../src';
 import { color } from '../src/styles';
 
 storiesOf('Link', module)
+  .addParameters({
+    component: Link,
+  })
   .addWithJSX(
     'default',
     (): React.ReactElement => (

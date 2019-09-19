@@ -6,6 +6,9 @@ import { TabbedContainer } from '../src';
 import { color } from '../src/styles';
 
 storiesOf('TabbedContainer', module)
+  .addParameters({
+    component: TabbedContainer,
+  })
   .addWithJSX(
     'default colors',
     (): React.ReactElement => {
