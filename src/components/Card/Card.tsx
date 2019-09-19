@@ -3,13 +3,34 @@ import { jsx, css } from '@emotion/core';
 import { color } from '../../styles';
 
 interface Props {
+  /**
+   * Main content
+   */
   children: React.ReactNode;
+  /**
+   * Column number containing the main content
+   */
   mainColumn?: number;
+  /**
+   * Rounded corners
+   */
+  isRounded?: boolean;
+  /**
+   * Vertical Layout
+   */
+  isVertical: boolean;
+  /**
+   * Show dashed separator line between parts
+   */
+  showSeparators?: boolean;
 }
 
 const Card: React.FunctionComponent<Props> = ({
   children,
   mainColumn = 1,
+  isRounded = false,
+  isVertical = false,
+  showSeparators = false,
 }: Props): React.ReactElement => {
   const style = css`
     background-color: ${color.white};

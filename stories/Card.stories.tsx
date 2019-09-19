@@ -8,6 +8,13 @@ import { typeface, color } from '../src/styles';
 storiesOf('Card', module)
   .addParameters({
     component: Card,
+    backgrounds: [
+      {
+        name: 'Light grey background',
+        value: color.grey.lightPageBackground,
+        default: true,
+      },
+    ],
   })
   .addWithJSX(
     'with simple content',
