@@ -8,21 +8,20 @@ interface Props {
    */
   children?: React.ReactNode;
   /**
-   * Boolean - set to true to make this button span the width of its parent
-   * @default false
+   * Set to true to make this button span the width of its parent
    */
   fullWidth?: boolean;
   /**
-   * Boolean - set to true to add a text-transform: uppercase; rule to this button's css
-   * @default false
+   * Set to true to add a text-transform: uppercase; rule to this button's css
    */
   allCaps?: boolean;
   /**
-   * @description Set to true to give this button a light-colored border
-   * @type boolean
-   *
+   * Set to true to give this button a light-colored border
    */
   lightBorder?: boolean;
+  /**
+   * Event fired when this button is clicked
+   */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
 }
 
