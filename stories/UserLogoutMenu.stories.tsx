@@ -12,11 +12,7 @@ storiesOf('UserLogoutMenu', module)
   .addWithJSX(
     'default',
     (): React.ReactElement => (
-      <div
-        style={{
-          backgroundColor: color.black,
-        }}
-      >
+      <div>
         <UserLogoutMenu userId="Ali" logoutUrl="/logout" />
       </div>
     )

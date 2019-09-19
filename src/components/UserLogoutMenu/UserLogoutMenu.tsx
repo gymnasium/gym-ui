@@ -10,7 +10,7 @@ const style = css`
   color: ${color.orange};
   border: none;
   padding: 0.25rem 0;
-
+  background-color: transparent;
   :focus {
     outline: 0;
   }
