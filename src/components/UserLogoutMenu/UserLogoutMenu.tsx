@@ -53,7 +53,7 @@ const UserLogoutMenu: React.FunctionComponent<Props> = ({
         <span css={caretStyle} />
       </button>
       {isOpen && (
-        <Link dark to={logoutUrl}>
+        <Link isLight to={logoutUrl}>
           Log Out
         </Link>
       )}
