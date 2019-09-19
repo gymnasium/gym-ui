@@ -2,26 +2,29 @@
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
-const styleLight = css`
+const baseStyle = css`
   text-decoration: none;
   color: ${color.orange};
+  background-color: transparent;
   font-family: ${typeface.text};
   transition: all 0.1s linear 0s;
   :hover {
-    text-decoration: none;
     border-bottom: 1px solid;
   }
 `;
 
-const styleDark = css`
-  text-decoration: none;
+const darkStyle = css`
   color: ${color.grey[800]};
-  background-color: transparent;
-  font-family: ${typeface.title};
-  transition: all 0.1s linear 0s;
   :hover {
-    text-decoration: none;
-    border: 0px;
+    border-bottom: 0;
+    color: ${color.orange};
+  }
+`;
+
+const lightStyle = css`
+  color: ${color.grey.lightPageBackground};
+  :hover {
+    border: 0;
     color: ${color.orange};
   }
 `;
@@ -29,7 +32,8 @@ const styleDark = css`
 interface Props {
   children: React.ReactNode;
   to: string;
-  dark?: boolean;
+  isDark?: boolean;
+  isLight?: boolean;
   rel?: string;
   target?: string;
   title?: string;
@@ -38,10 +42,15 @@ interface Props {
 const Link: React.FunctionComponent<Props> = ({
   children,
   to,
-  dark = false,
+  isDark = false,
+  isLight = false,
   ...rest
 }: Props): React.ReactElement => (
-  <a css={dark ? styleDark : styleLight} href={to} {...rest}>
+  <a
+    css={[baseStyle, isDark && darkStyle, isLight && lightStyle]}
+    href={to}
+    {...rest}
+  >
     {children}
   </a>
 );
