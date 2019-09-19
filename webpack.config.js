@@ -20,7 +20,6 @@ module.exports = {
           {
             loader: 'ts-loader',
           },
-          require.resolve('react-docgen-typescript-loader'),
         ],
       },
       {
