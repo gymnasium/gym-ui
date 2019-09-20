@@ -2,7 +2,15 @@
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
-const style = css``;
+const style = css`
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  font-size: 1rem;
+  * {
+    margin: 0 1rem;
+  }
+`;
 
 interface Props {
   children: React.ReactNode;

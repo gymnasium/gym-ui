@@ -36,7 +36,7 @@ const Button: React.FunctionComponent<Props> = ({
   onClick = (): void => {},
 }: Props): React.ReactElement => {
   const style = css`
-    font: bold 1.4em/1 ${typeface.text};
+    font: bold 1.2rem/1 ${typeface.text};
     background-color: ${color.orange};
     color: ${color.white};
     border: 0;
