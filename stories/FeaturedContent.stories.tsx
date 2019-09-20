@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { FeaturedContent, Link, Separator, Button } from '../src';
+import { FeaturedContent, Link, Separator, Button, H2, H3, H4 } from '../src';
 import { typeface, color } from '../src/styles';
 
 storiesOf('FeaturedContent', module)
@@ -50,10 +50,13 @@ storiesOf('FeaturedContent', module)
                 src="https://gymcms.xyz/img/webinars/featured-webinar/prototyping-as-process-paravel-slide.png"
                 width="100%"
               />
-              <h3 className="all-caps">
-                UX Design: Prototyping
-                <span className="no-wrap">as Process</span>
-              </h3>
+              <H2>
+                UX Design:
+                <br />
+                Prototyping
+                <br />
+                as Process
+              </H2>
             </div>
           </FeaturedContent>
         </div>
@@ -97,11 +100,11 @@ storiesOf('FeaturedContent', module)
                     width="256"
                   />
                 </div>
-                <h2>Modern web design</h2>
-                <p>
+                <H2>Modern web design</H2>
+                <H4>
                   A beginner’s guide to front-end development covering HTML,
                   CSS, and JavaScript.
-                </p>
+                </H4>
               </Link>
             </div>
           </FeaturedContent>

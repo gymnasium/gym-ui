@@ -43,7 +43,7 @@ storiesOf('Card', module)
   .addWithJSX(
     'with columns',
     (): React.ReactElement => (
-      <Card mainColumn={2}>
+      <Card mainColumnOrRow={2}>
         <div style={{ width: '150px' }}>
           <p style={{ backgroundColor: color.teal }}>Hello there!</p>
           <p>Left column here</p>
@@ -93,7 +93,7 @@ storiesOf('Card', module)
   .addWithJSX(
     'with columns and separators',
     (): React.ReactElement => (
-      <Card showSeparators mainColumn={2}>
+      <Card showSeparators mainColumnOrRow={2}>
         <div style={{ width: '150px' }}>
           <p style={{ backgroundColor: color.teal }}>Hello there!</p>
           <p>Left column here</p>

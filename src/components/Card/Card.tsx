@@ -10,7 +10,7 @@ interface Props {
   /**
    * Column number containing the main content
    */
-  mainColumn?: number;
+  mainColumnOrRow?: number;
   /**
    * Rounded corners
    */
@@ -27,7 +27,7 @@ interface Props {
 
 const Card: React.FunctionComponent<Props> = ({
   children,
-  mainColumn = 1,
+  mainColumnOrRow = 1,
   isRounded = false,
   isVertical = false,
   showSeparators = false,
@@ -42,12 +42,12 @@ const Card: React.FunctionComponent<Props> = ({
     justify-content: space-between;
 
     /* Padding */
-    > * {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-    }
+    /* > * {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    } */
     /* Grow the main column */
-    > *:nth-child(${mainColumn}) {
+    > *:nth-child(${mainColumnOrRow}) {
       flex-grow: 1;
     }
     /* Separator */

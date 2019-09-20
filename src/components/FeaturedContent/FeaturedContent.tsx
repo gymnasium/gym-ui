@@ -3,6 +3,7 @@ import { jsx, css } from '@emotion/core';
 import { Fragment } from 'react';
 import { color, typeface } from '../../styles';
 import { H2, H3 } from '../Headings';
+import Card from '../Card';
 
 interface Props {
   /**
@@ -12,7 +13,7 @@ interface Props {
   /**
    * Card title
    */
-  title: string;
+  title?: string;
   /**
    * Content of the footer area of the card
    */
@@ -33,54 +34,62 @@ interface Props {
 
 const FeaturedContent: React.FunctionComponent<Props> = ({
   children,
-  title,
+  title = undefined,
   footer,
   extra,
   backgroundColor = color.red,
   strongHeader = false,
 }: Props): React.ReactElement => {
+  const headerStyle = css`
+    padding: 0.01rem 1rem;
+    color: ${strongHeader ? color.grey.dark : color.white};
+    background-color: ${strongHeader ? `transparent` : backgroundColor};
+    text-transform: ${strongHeader && 'uppercase'};
+    font-family: ${typeface.title};
+  `;
+
+  const mainStyle = css`
+    background-color: ${backgroundColor};
+    padding: 0 1rem 1rem 1rem;
+    color: ${color.white};
+  `;
+
+  const footerStyle = css`
+    padding: 1rem 1rem;
+    font-family: ${typeface.text};
+    color: ${color.grey.dark};
+  `;
+
   const extraStyle = css`
     background-color: transparent;
     padding: 1.5rem 1rem 1rem 1rem;
     text-align: center;
   `;
 
-  const mainStyle = css`
+  const zzzmainStyle = css`
     border: 1px solid ${color.grey.regular};
     border-radius: 3px;
     background-color: ${color.white};
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.4;
-    header {
-      padding: 0.01rem 1rem;
-      color: ${strongHeader ? color.grey.dark : color.white};
-      background-color: ${strongHeader ? color.white : backgroundColor};
-      text-transform: ${strongHeader && 'uppercase'};
-      font-family: ${typeface.title};
-    }
+    padding: 1rem;
 
     section {
-      background-color: ${backgroundColor};
-      padding: 0 1rem 1rem 1rem;
-      color: ${color.white};
-      font-family: ${typeface.text};
-    }
-
-    footer {
-      padding: 1rem 1rem;
-      font-family: ${typeface.text};
-      color: ${color.grey.dark};
     }
   `;
 
   return (
     <Fragment>
-      <article css={mainStyle}>
-        <header>{strongHeader ? <H2>{title}</H2> : <H3>{title}</H3>}</header>
-        <section>{children}</section>
-        {footer && <footer>{footer}</footer>}
-      </article>
+      <Card isVertical isRounded css={mainStyle}>
+        {title && (
+          <header css={headerStyle}>
+            {strongHeader ? <H2>{title}</H2> : <H3>{title}</H3>}
+          </header>
+        )}
+        <section css={mainStyle}>{children}</section>
+        {footer && <footer css={footerStyle}>{footer}</footer>}
+      </Card>
       {extra && <article css={extraStyle}>{extra}</article>}
     </Fragment>
   );
