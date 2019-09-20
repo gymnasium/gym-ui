@@ -18,7 +18,7 @@ interface Props {
   /**
    * Vertical Layout
    */
-  isVertical: boolean;
+  isVertical?: boolean;
   /**
    * Show dashed separator line between parts
    */
@@ -35,14 +35,15 @@ const Card: React.FunctionComponent<Props> = ({
   const style = css`
     background-color: ${color.white};
     border: 1px solid ${color.grey.regular};
+    border-radius: ${isRounded && `3px`};
+
     display: flex;
-    flex-direction: row;
+    flex-direction: ${isVertical ? `column` : `row`};
     justify-content: space-between;
+
     /* Padding */
     > * {
-      /* margin-left: 0.5rem; */
       padding-left: 0.5rem;
-      /* margin-right: 0.5rem; */
       padding-right: 0.5rem;
     }
     /* Grow the main column */
@@ -51,7 +52,12 @@ const Card: React.FunctionComponent<Props> = ({
     }
     /* Separator */
     > *:not(:first-child) {
-      border-left: 2px dashed ${color.grey.lightPageBackground};
+      border-left: ${showSeparators &&
+        !isVertical &&
+        `2px dashed ${color.grey.lightPageBackground}`};
+      border-top: ${showSeparators &&
+        isVertical &&
+        `2px dashed ${color.grey.lightPageBackground}`};
     }
   `;
 
