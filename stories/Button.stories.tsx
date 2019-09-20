@@ -8,34 +8,6 @@ import { color } from '../src/styles';
 
 const onClickAction = action('Button clicked');
 
-const defaultButton = <Button onClick={onClickAction}>Default</Button>;
-const fullWidthButton = (
-  <Button fullWidth onClick={onClickAction}>
-    Full Width
-  </Button>
-);
-const allCapsButton = (
-  <Button allCaps onClick={onClickAction}>
-    all caps
-  </Button>
-);
-
-const lightButton = (
-  <div
-    style={{
-      backgroundColor: color.grey.lightPageBackground,
-      padding: '1rem',
-      margin: '1rem 0',
-    }}
-  >
-    <Button lightBorder onClick={onClickAction}>
-      Light Border
-    </Button>
-  </div>
-);
-
-const linkButton = <Button to="/">Link</Button>;
-
 storiesOf('Button', module)
   .addParameters({
     component: Button,
@@ -45,19 +17,65 @@ storiesOf('Button', module)
     'Summary',
     (): React.ReactElement => (
       <>
-        {defaultButton}
-        {allCapsButton}
-        {lightButton}
-        {fullWidthButton}
-        {linkButton}
+        <Button onClick={onClickAction}>Default</Button>
+        <Button allCaps onClick={onClickAction}>
+          all caps
+        </Button>
+        <div
+          style={{
+            backgroundColor: color.black,
+            padding: '1rem',
+            margin: '1rem 0',
+          }}
+        >
+          <Button lightBorder onClick={onClickAction}>
+            Light Border
+          </Button>
+        </div>
+        <Button fullWidth onClick={onClickAction}>
+          Full Width
+        </Button>
+        <Button to="/">Link</Button>
       </>
     )
   )
-  .addWithJSX('default', (): React.ReactElement => defaultButton)
-  .addWithJSX('full width', (): React.ReactElement => fullWidthButton)
-  .addWithJSX('all caps', (): React.ReactElement => allCapsButton)
+  .addWithJSX(
+    'default',
+    (): React.ReactElement => <Button onClick={onClickAction}>Default</Button>
+  )
+  .addWithJSX(
+    'full width',
+    (): React.ReactElement => (
+      <Button fullWidth onClick={onClickAction}>
+        Full Width
+      </Button>
+    )
+  )
+  .addWithJSX(
+    'all caps',
+    (): React.ReactElement => (
+      <Button allCaps onClick={onClickAction}>
+        all caps
+      </Button>
+    )
+  )
   .addWithJSX(
     'light border on a dark background',
-    (): React.ReactElement => lightButton
+    (): React.ReactElement => (
+      <div
+        style={{
+          backgroundColor: color.black,
+          padding: '1rem',
+          margin: '1rem 0',
+        }}
+      >
+        <Button lightBorder onClick={onClickAction}>
+          Light Border
+        </Button>
+      </div>
+    )
   )
-  .addWithJSX('hyperlink', (): React.ReactElement => linkButton);
+  .addWithJSX(
+    'hyperlink',
+    (): React.ReactElement => <Button to="/">Link</Button>
+  );
