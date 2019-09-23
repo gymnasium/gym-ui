@@ -1,28 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color, typeface } from '../../styles';
 import Link from '../Link';
 import { H3 } from '../Headings';
 
 const baseStyle = css`
   > * {
     vertical-align: middle;
-  }
-`;
-
-const darkStyle = css`
-  color: ${color.grey[800]};
-  :hover {
-    border-bottom: 0;
-    color: ${color.orange};
-  }
-`;
-
-const lightStyle = css`
-  color: ${color.grey.lightPageBackground};
-  :hover {
-    border: 0;
-    color: ${color.orange};
   }
 `;
 
