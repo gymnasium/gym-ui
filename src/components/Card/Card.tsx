@@ -25,11 +25,11 @@ const Card: React.FunctionComponent<Props> = ({
       padding-right: 0.5rem;
     }
     /* Grow the main column */
-    > *:nth-child(${mainColumn}) {
+    > *:nth-of-type(${mainColumn}) {
       flex-grow: 1;
     }
     /* Separator */
-    > *:not(:first-child) {
+    > *:not(:first-of-tyep) {
       border-left: 2px dashed ${color.grey.lightPageBackground};
     }
   `;
