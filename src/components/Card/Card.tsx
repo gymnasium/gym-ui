@@ -29,7 +29,7 @@ const Card: React.FunctionComponent<Props> = ({
       flex-grow: 1;
     }
     /* Separator */
-    > *:not(:first-of-tyep) {
+    > *:not(:first-of-type) {
       border-left: 2px dashed ${color.grey.lightPageBackground};
     }
   `;
