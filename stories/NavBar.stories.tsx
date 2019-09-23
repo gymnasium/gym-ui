@@ -13,20 +13,37 @@ storiesOf('NavBar', module)
     'default',
     (): React.ReactElement => {
       return (
-        <div style={{ backgroundColor: color.black }}>
-          <NavBar>
-            <Link isLight to="/courses">
-              Courses
-            </Link>
-            <Link isLight to="/jobs">
-              Jobs
-            </Link>
-            <Link isLight to="/about">
-              About
-            </Link>
-            <Button to="/login">Log In</Button>
-          </NavBar>
-        </div>
+        <NavBar>
+          <Link isLight to="/courses">
+            Courses
+          </Link>
+          <Link isLight to="/jobs">
+            Jobs
+          </Link>
+          <Link isLight to="/about">
+            About
+          </Link>
+          <Button to="/login">Log In</Button>
+        </NavBar>
+      );
+    }
+  )
+  .addWithJSX(
+    'dark gray background',
+    (): React.ReactElement => {
+      return (
+        <NavBar backgroundColor={color.grey.dark}>
+          <Link isLight to="/courses">
+            Courses
+          </Link>
+          <Link isLight to="/jobs">
+            Jobs
+          </Link>
+          <Link isLight to="/about">
+            About
+          </Link>
+          <Button to="/login">Log In</Button>
+        </NavBar>
       );
     }
   )
@@ -34,20 +51,18 @@ storiesOf('NavBar', module)
     'right-justified',
     (): React.ReactElement => {
       return (
-        <div style={{ backgroundColor: color.black }}>
-          <NavBar justifyContent="right">
-            <Link isLight to="/courses">
-              Courses
-            </Link>
-            <Link isLight to="/jobs">
-              Jobs
-            </Link>
-            <Link isLight to="/about">
-              About
-            </Link>
-            <Button to="/login">Log In</Button>
-          </NavBar>
-        </div>
+        <NavBar justifyContent="right">
+          <Link isLight to="/courses">
+            Courses
+          </Link>
+          <Link isLight to="/jobs">
+            Jobs
+          </Link>
+          <Link isLight to="/about">
+            About
+          </Link>
+          <Button to="/login">Log In</Button>
+        </NavBar>
       );
     }
   )
@@ -55,20 +70,18 @@ storiesOf('NavBar', module)
     'centered',
     (): React.ReactElement => {
       return (
-        <div style={{ backgroundColor: color.black }}>
-          <NavBar justifyContent="center">
-            <Link isLight to="/courses">
-              Courses
-            </Link>
-            <Link isLight to="/jobs">
-              Jobs
-            </Link>
-            <Link isLight to="/about">
-              About
-            </Link>
-            <Button to="/login">Log In</Button>
-          </NavBar>
-        </div>
+        <NavBar justifyContent="center">
+          <Link isLight to="/courses">
+            Courses
+          </Link>
+          <Link isLight to="/jobs">
+            Jobs
+          </Link>
+          <Link isLight to="/about">
+            About
+          </Link>
+          <Button to="/login">Log In</Button>
+        </NavBar>
       );
     }
   );
