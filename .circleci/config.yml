@@ -63,7 +63,7 @@ workflows:
       - build
       - percy-tests
           requires:
-            -build
+            - build
           
           filters:
             branches:
