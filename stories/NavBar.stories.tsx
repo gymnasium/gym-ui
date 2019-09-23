@@ -32,7 +32,7 @@ storiesOf('NavBar', module)
     'default with logo',
     (): React.ReactElement => {
       return (
-        <NavBar displayLogo="right">
+        <NavBar showLogo logoPosition="right">
           <Link isLight to="/courses">
             Courses
           </Link>
@@ -107,7 +107,7 @@ storiesOf('NavBar', module)
     'right-justified with logo',
     (): React.ReactElement => {
       return (
-        <NavBar justifyContent="right" displayLogo="left">
+        <NavBar justifyContent="right" showLogo logoPosition="left">
           <Link isLight to="/courses">
             Courses
           </Link>

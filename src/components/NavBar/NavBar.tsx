@@ -13,14 +13,13 @@ interface Props {
   /**
    * Set the backgound color of the `NavBar`
    */
-  backgroundColor: string;
+  backgroundColor?: string;
   /** Height Override */
   height?: string;
-  /** Display Gymnasium Logo
-   * To display, use `left` or `right`
-   * To hide, don't specify this prop or use `no`
-   */
-  displayLogo?: 'left' | 'right' | 'no';
+  /** Show Gymnasium Logo */
+  showLogo?: boolean;
+  /** The position of the logo (if shown) */
+  logoPosition?: 'left' | 'right';
 }
 
 const alignMap = { left: 'flex-start', right: 'flex-end', center: 'center' };
@@ -33,14 +32,15 @@ const NavBar: React.FunctionComponent<Props> = ({
   justifyContent = 'left',
   backgroundColor = color.black,
   height = '4.5rem',
-  displayLogo = 'no',
+  showLogo = false,
+  logoPosition = 'right',
 }: Props): React.ReactElement => {
   const baseStyle = css`
     height: ${height};
     background-color: ${backgroundColor};
     display: flex;
     align-items: center;
-    flex-direction: ${displayLogo === 'left' ? 'row-reverse' : 'row'};
+    flex-direction: ${logoPosition === 'left' ? 'row-reverse' : 'row'};
     padding: 0 1rem;
   `;
 
@@ -57,15 +57,14 @@ const NavBar: React.FunctionComponent<Props> = ({
   `;
 
   const logoStyle = css`
-    display: ${displayLogo === 'no' && `none`};
-    margin-left: ${displayLogo === 'right' && `auto`};
-    margin-right: ${displayLogo === 'left' && `auto`};
+    margin-left: ${logoPosition === 'right' && `auto`};
+    margin-right: ${logoPosition === 'left' && `auto`};
   `;
 
   return (
     <div css={baseStyle}>
       <div css={navStyle}>{children}</div>
-      {displayLogo !== 'no' && (
+      {showLogo && (
         <span css={logoStyle}>
           <GymLogo backgroundColor="transparent" />
         </span>
