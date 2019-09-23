@@ -48,6 +48,24 @@ storiesOf('NavBar', module)
     }
   )
   .addWithJSX(
+    'height override',
+    (): React.ReactElement => {
+      return (
+        <NavBar height="3rem">
+          <Link isLight to="/courses">
+            Courses
+          </Link>
+          <Link isLight to="/jobs">
+            Jobs
+          </Link>
+          <Link isLight to="/about">
+            About
+          </Link>
+        </NavBar>
+      );
+    }
+  )
+  .addWithJSX(
     'right-justified',
     (): React.ReactElement => {
       return (
