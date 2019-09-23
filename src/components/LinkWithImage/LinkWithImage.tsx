@@ -2,15 +2,11 @@
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 import Link from '../Link';
+import { H3 } from '../Headings';
 
 const baseStyle = css`
-  text-decoration: none;
-  color: ${color.orange};
-  background-color: transparent;
-  font-family: ${typeface.text};
-  transition: all 0.1s linear 0s;
-  :hover {
-    border-bottom: 1px solid;
+  > * {
+    vertical-align: middle;
   }
 `;
 
@@ -39,6 +35,8 @@ interface Props {
   to: string;
   /** Link rel attribute */
   rel?: string;
+  /** Link title  */
+  title?: string;
   /** Link target text attribute */
   target?: string;
   /** Image source URL */
@@ -47,33 +45,59 @@ interface Props {
   imageSrcSet?: string;
   /** Image alternate text */
   imageAlt?: string;
-  /** Image width */
-  imageWidth?: string;
-  /** Image Height */
+  /** Image height override */
   imageHeight?: string;
+  /** Image backgound color to fill around the image */
+  imageBackgroundColor?: string;
 }
 
 const LinkWithImage: React.FunctionComponent<Props> = ({
   children,
   to,
   rel = undefined,
+  title = undefined,
   target = undefined,
   imageSrc,
   imageSrcSet = undefined,
   imageAlt = undefined,
-  imageWidth = undefined,
-  imageHeight = undefined,
-}: Props): React.ReactElement => (
-  <Link to={to} rel={rel} target={target}>
-    <img
-      src={imageSrc}
-      srcSet={imageSrcSet}
-      alt={imageAlt}
-      width={imageWidth}
-      height={imageHeight}
-    />
-    {children}
-  </Link>
-);
+  imageHeight = '7rem',
+  imageBackgroundColor = undefined,
+}: Props): React.ReactElement => {
+  const imageStyle = css`
+    border-radius: 50%;
+    height: ${imageHeight};
+    width: ${imageHeight};
+    background-color: ${imageBackgroundColor};
+  `;
+
+  const LinkStyle = css`
+    display: inline-block;
+    margin-left: 1.5rem;
+  `;
+
+  return (
+    <div css={baseStyle}>
+      <a href={to} rel={rel} target={target} title={title}>
+        <img
+          css={imageStyle}
+          src={imageSrc}
+          srcSet={imageSrcSet}
+          alt={imageAlt}
+        />
+      </a>
+      <span
+        css={css`
+          display: inline-block;
+        `}
+      >
+        <H3>
+          <Link css={LinkStyle} to={to} rel={rel} target={target} title={title}>
+            {children}
+          </Link>
+        </H3>
+      </span>
+    </div>
+  );
+};
 
 export default LinkWithImage;
