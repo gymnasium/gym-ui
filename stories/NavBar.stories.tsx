@@ -10,11 +10,53 @@ storiesOf('NavBar', module)
     component: NavBar,
   })
   .addWithJSX(
-    'example',
+    'default',
     (): React.ReactElement => {
       return (
         <div style={{ backgroundColor: color.black }}>
           <NavBar>
+            <Link isLight to="/courses">
+              Courses
+            </Link>
+            <Link isLight to="/jobs">
+              Jobs
+            </Link>
+            <Link isLight to="/about">
+              About
+            </Link>
+            <Button to="/login">Log In</Button>
+          </NavBar>
+        </div>
+      );
+    }
+  )
+  .addWithJSX(
+    'right-justified',
+    (): React.ReactElement => {
+      return (
+        <div style={{ backgroundColor: color.black }}>
+          <NavBar justifyContent="right">
+            <Link isLight to="/courses">
+              Courses
+            </Link>
+            <Link isLight to="/jobs">
+              Jobs
+            </Link>
+            <Link isLight to="/about">
+              About
+            </Link>
+            <Button to="/login">Log In</Button>
+          </NavBar>
+        </div>
+      );
+    }
+  )
+  .addWithJSX(
+    'centered',
+    (): React.ReactElement => {
+      return (
+        <div style={{ backgroundColor: color.black }}>
+          <NavBar justifyContent="center">
             <Link isLight to="/courses">
               Courses
             </Link>
