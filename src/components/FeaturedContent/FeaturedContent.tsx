@@ -66,19 +66,6 @@ const FeaturedContent: React.FunctionComponent<Props> = ({
     text-align: center;
   `;
 
-  const zzzmainStyle = css`
-    border: 1px solid ${color.grey.regular};
-    border-radius: 3px;
-    background-color: ${color.white};
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.4;
-    padding: 1rem;
-
-    section {
-    }
-  `;
-
   return (
     <Fragment>
       <Card isVertical isRounded css={mainStyle}>
