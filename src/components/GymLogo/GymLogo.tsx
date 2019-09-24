@@ -24,7 +24,7 @@ interface Props {
 const GymLogo: React.FunctionComponent<Props> = ({
   width = '200px',
   height = '23px',
-  backgroundColor = color.grey.dark,
+  backgroundColor = 'transparent',
 }: Props): React.ReactElement => {
   const style = css`
     display: inline-block;
