@@ -29,6 +29,11 @@ interface Props {
    * In this case, the onClick callback will not be used
    */
   to?: string;
+  /**
+   * isSmall flag produces a smaller version of the button
+   * intended mainly for navigation bars
+   */
+  isSmall?: boolean;
 }
 
 /**
@@ -41,6 +46,7 @@ const Button: React.FunctionComponent<Props> = ({
   lightBorder = false,
   onClick = (): void => {},
   to = undefined,
+  isSmall = false,
 }: Props): React.ReactElement => {
   const style = css`
     text-decoration: none;
@@ -66,17 +72,25 @@ const Button: React.FunctionComponent<Props> = ({
     }
   `;
 
+  const smallStyle = css`
+    font: bold 0.9rem/1 ${typeface.text};
+  `;
+
   if (to)
     return (
       // Hyperlink
-      <a css={style} type="button" href={to}>
+      <a css={[style, isSmall && smallStyle]} type="button" href={to}>
         {children}
       </a>
     );
 
   return (
     // Real button
-    <button css={style} type="button" onClick={onClick}>
+    <button
+      css={[style, isSmall && smallStyle]}
+      type="button"
+      onClick={onClick}
+    >
       {children}
     </button>
   );

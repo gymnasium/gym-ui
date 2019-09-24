@@ -4,11 +4,10 @@ import { color, typeface } from '../../styles';
 import Button from '../Button';
 
 const style = css`
+  display: flex;
+  align-items: center;
   height: 50px;
   background-color: ${color.black};
-  border: 1px red solid;
-  > * {
-  }
 `;
 
 interface Props {
@@ -22,7 +21,7 @@ const PrimaryNavigation: React.FunctionComponent<Props> = ({
   userId = undefined,
 }: // children,
 Props): React.ReactElement => (
-  <nav css={style}>{!isLoggedIn && <Button>Sign Up</Button>}</nav>
+  <nav css={style}>{!isLoggedIn && <Button isSmall>Sign Up</Button>}</nav>
 );
 
 export default PrimaryNavigation;
