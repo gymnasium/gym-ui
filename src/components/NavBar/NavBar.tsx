@@ -1,70 +1,64 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color } from '../../styles';
-import GymLogo from '../GymLogo';
 
 interface Props {
-  children: React.ReactNode;
   /**
-   * Position of navigation links (or other content) inside the `NavBar`
-   * Valid values are "left", "right", and "center"
+   * NavBar content that is left aligned
    */
-  justifyContent?: 'left' | 'right' | 'center';
+  leftContent?: React.ReactNode;
+  /**
+   * NavBar content that is right aligned
+   */
+  rightContent?: React.ReactNode;
   /**
    * Set the backgound color of the `NavBar`
    */
   backgroundColor?: string;
   /** Height Override */
   height?: string;
-  /** Show Gymnasium Logo */
-  showLogo?: boolean;
 }
-
-const alignMap = { left: 'flex-start', right: 'flex-end', center: 'center' };
 
 /**
  * Use `NavBar` as a horizontal container for navigation links
  */
 const NavBar: React.FunctionComponent<Props> = ({
-  children,
-  justifyContent = 'right',
-  backgroundColor = color.black,
+  leftContent,
+  rightContent,
+  // justifyContent = 'right',
+  backgroundColor = 'transparent',
   height = '4.5rem',
-  showLogo = false,
 }: Props): React.ReactElement => {
   const baseStyle = css`
     height: ${height};
     background-color: ${backgroundColor};
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
-    padding: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
   `;
 
   const navStyle = css`
     display: inline-flex;
     flex-direction: 'row';
-    justify-content: ${alignMap[justifyContent]};
     align-items: center;
     font-size: 1rem;
-    flex-grow: 1;
+    width: fit-content;
     > * {
-      margin: 0 1rem;
+      margin: 0 1.25rem;
     }
   `;
 
-  const logoStyle = css`
-    margin-right: auto;
+  const leftStyle = css`
+    justify-content: flex-start;
+  `;
+  const rightStyle = css`
+    justify-content: flex-end;
   `;
 
   return (
     <div css={baseStyle}>
-      <div css={navStyle}>{children}</div>
-      {showLogo && (
-        <span css={logoStyle}>
-          <GymLogo backgroundColor="transparent" />
-        </span>
-      )}
+      <div css={[navStyle, leftStyle]}>{leftContent}</div>
+      <div css={[navStyle, rightStyle]}>{rightContent}</div>
     </div>
   );
 };
