@@ -29,8 +29,6 @@ const GymLogo: React.FunctionComponent<Props> = ({
   const style = css`
     display: inline-block;
     background-color: ${backgroundColor};
-    width: ${width};
-    height: ${height};
   `;
 
   return (

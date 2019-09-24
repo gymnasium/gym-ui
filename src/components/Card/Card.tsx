@@ -47,7 +47,7 @@ const Card: React.FunctionComponent<Props> = ({
       padding-right: 1rem;
     } */
     /* Grow the main column */
-    > *:nth-child(${mainColumnOrRow}) {
+    > *:nth-of-type(${mainColumnOrRow}) {
       flex-grow: 1;
     }
     /* Separator */
