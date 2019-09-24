@@ -32,7 +32,11 @@ interface Props {
 }
 
 /**
- * Use `button` for a navigable call to action, or as a trigger for dynamic functionality.
+ * Use `button` for a navigable call to action, or as a trigger for dynamic functionality:
+ * ```
+ * import { Button } from '@gymnasium/gym-ui'
+ * const Button = <Button onClick={alert('clicked!')}>Click me for an alert</Button>;
+ * ```
  */
 const Button: React.FunctionComponent<Props> = ({
   children = null,
