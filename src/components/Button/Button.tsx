@@ -20,9 +20,15 @@ interface Props {
    */
   lightBorder?: boolean;
   /**
-   * Event fired when this button is clicked
+   * Callback for event fired when this button is clicked
    */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
+  /**
+   * URL to set the button as an anchor/hyperlink
+   * When used, the button is turned into an anchor element
+   * In this case, the onClick callback will not be used
+   */
+  to?: string;
 }
 
 /**
@@ -34,6 +40,7 @@ const Button: React.FunctionComponent<Props> = ({
   allCaps = false,
   lightBorder = false,
   onClick = (): void => {},
+  to = undefined,
 }: Props): React.ReactElement => {
   const style = css`
     font: bold 1.2rem/1 ${typeface.text};
@@ -52,12 +59,22 @@ const Button: React.FunctionComponent<Props> = ({
     text-transform: ${allCaps && 'uppercase'};
     width: ${fullWidth && '100%'};
     border: ${lightBorder && `2px solid ${color.white} !important`};
+    transition: all 0.1s linear 0s;
     :hover {
       background-color: ${color.grey.light};
     }
   `;
 
+  if (to)
+    return (
+      // Hyperlink
+      <a css={style} type="button" href={to}>
+        {children}
+      </a>
+    );
+
   return (
+    // Real button
     <button css={style} type="button" onClick={onClick}>
       {children}
     </button>
