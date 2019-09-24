@@ -11,5 +11,7 @@ storiesOf('PrimaryNavigation', module)
   .addWithJSX('logged out', (): React.ReactElement => <PrimaryNavigation />)
   .addWithJSX(
     'logged in',
-    (): React.ReactElement => <PrimaryNavigation isLoggedIn userId="Ali" />
+    (): React.ReactElement => (
+      <PrimaryNavigation isLoggedIn userId="Ali" logoutUrl="/logout" />
+    )
   );
