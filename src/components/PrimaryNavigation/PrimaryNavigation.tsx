@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
-import { color, typeface } from '../../styles';
+import { color } from '../../styles';
 import Button from '../Button';
 import Icon from '../Icon';
 import NavBar from '../NavBar';

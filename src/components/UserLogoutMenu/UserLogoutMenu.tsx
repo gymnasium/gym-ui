@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 import { color, typeface } from '../../styles';
 import Link from '../Link';
 
