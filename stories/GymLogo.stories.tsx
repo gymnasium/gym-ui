@@ -8,6 +8,9 @@ import { color } from '../src/styles';
 storiesOf('GymLogo', module)
   .addParameters({
     component: GymLogo,
+    backgrounds: [
+      { name: 'Nav dark grey', value: color.grey.dark, default: true },
+    ],
   })
   .addWithJSX('default', (): React.ReactElement => <GymLogo />)
   .addWithJSX(
