@@ -1,4 +1,5 @@
 import Button from './components/Button';
+import GymLogo from './components/GymLogo';
 import Link from './components/Link';
 import LinkWithImage from './components/LinkWithImage';
 import Card from './components/Card';
@@ -12,6 +13,7 @@ import Separator from './components/Separator';
 
 export {
   Button,
+  GymLogo,
   Link,
   LinkWithImage,
   Card,
