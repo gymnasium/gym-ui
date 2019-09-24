@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
 import { color } from '../../styles';
 import Button from '../Button';
-import Icon from '../Icon';
+import GymIcon from '../GymIcon';
 import NavBar from '../NavBar';
 import UserLogoutMenu from '../UserLogoutMenu';
 
@@ -24,8 +24,8 @@ Props): React.ReactElement => {
   const rightContent = (
     <Fragment>
       {isLoggedIn && <UserLogoutMenu userId={userId} logoutUrl={logoutUrl} />}
-      <Icon iconIndex={0} />
-      <Icon iconIndex={1} />
+      <GymIcon iconIndex={0} />
+      <GymIcon iconIndex={1} />
     </Fragment>
   );
   return (

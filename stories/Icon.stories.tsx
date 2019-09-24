@@ -2,13 +2,13 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { Icon } from '../src';
+import { GymIcon } from '../src';
 import { color } from '../src/styles';
 
-storiesOf('Icon', module)
+storiesOf('GymIcon', module)
   .addParameters({
-    component: Icon,
+    component: GymIcon,
     backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
   })
-  .addWithJSX('Aquent', (): React.ReactElement => <Icon iconIndex={0} />)
-  .addWithJSX('Vitamin T', (): React.ReactElement => <Icon iconIndex={1} />);
+  .addWithJSX('Aquent', (): React.ReactElement => <GymIcon iconIndex={0} />)
+  .addWithJSX('Vitamin T', (): React.ReactElement => <GymIcon iconIndex={1} />);

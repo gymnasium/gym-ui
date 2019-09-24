@@ -1,4 +1,4 @@
-import Icon from './components/Icon';
+import GymIcon from './components/GymIcon';
 import Button from './components/Button';
 import GymLogo from './components/GymLogo';
 import Link from './components/Link';
@@ -15,7 +15,7 @@ import FeaturedContent from './components/FeaturedContent';
 import Separator from './components/Separator';
 
 export {
-  Icon,
+  GymIcon,
   Button,
   GymLogo,
   Link,
