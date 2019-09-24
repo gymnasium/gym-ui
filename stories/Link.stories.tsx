@@ -8,19 +8,21 @@ import { color } from '../src/styles';
 storiesOf('Link', module)
   .addParameters({
     component: Link,
+    componentSubtitle: 'A link to the past',
   })
   .addWithJSX(
     'default',
     (): React.ReactElement => (
       <>
-        <Link to="/">This is the default link on a light background</Link>
-        <br />
-        <br />
+        <Link to="/">This is the default link on a light background.</Link>{' '}
+        <Link isDark to="/">
+          This is a dark link on a light background
+        </Link>
         <div style={{ backgroundColor: color.black }}>
-          <br />
-          <Link to="/"> This is the default link on a dark background</Link>
-          <br />
-          <br />
+          <Link to="/"> This is the default link on a dark background.</Link>{' '}
+          <Link isLight to="/">
+            This is a light link on a dark background
+          </Link>
         </div>
       </>
     )

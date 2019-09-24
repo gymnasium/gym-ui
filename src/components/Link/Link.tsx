@@ -7,13 +7,14 @@ const baseStyle = css`
   color: ${color.orange};
   background-color: transparent;
   font-family: ${typeface.text};
-  transition: all 0.1s linear 0s;
   :hover {
+    text-decoration: none;
     border-bottom: 1px solid;
   }
 `;
 
 const darkStyle = css`
+  transition: all 0.1s linear 0s;
   color: ${color.grey[800]};
   :hover {
     border-bottom: 0;
@@ -22,6 +23,7 @@ const darkStyle = css`
 `;
 
 const lightStyle = css`
+  transition: all 0.1s linear 0s;
   color: ${color.grey.lightPageBackground};
   :hover {
     border: 0;
@@ -30,22 +32,37 @@ const lightStyle = css`
 `;
 
 interface Props {
+  /**
+   * The content to render within this link.
+   */
   children: React.ReactNode;
+  /**
+   * A passthrough to the anchor tag's href property. Accepts a URL string or javascript().
+   */
   to: string;
+  /**
+   * Set to true to render this link with dark text and an orange hover color.
+   */
   isDark?: boolean;
+  /**
+   * Set to true to render this link with white text and an orange hover color.
+   */
   isLight?: boolean;
-  rel?: string;
-  title?: string;
-  target?: string;
 }
 
-const Link: React.FunctionComponent<Props> = ({
+/**
+ * `Link` is a wrapper component for stylized anchor tags.
+ */
+const Link: React.FunctionComponent<
+  Props & React.HTMLProps<HTMLButtonElement>
+> = ({
   children,
   to,
   isDark = false,
   isLight = false,
   ...rest
 }: Props): React.ReactElement => (
+  /* eslint-disable react/jsx-props-no-spreading */
   <a
     css={[baseStyle, isDark && darkStyle, isLight && lightStyle]}
     href={to}
@@ -53,6 +70,7 @@ const Link: React.FunctionComponent<Props> = ({
   >
     {children}
   </a>
+  /* eslint-enable react/jsx-props-no-spreading */
 );
 
 export default Link;
