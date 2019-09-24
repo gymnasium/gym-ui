@@ -1,6 +1,6 @@
 /** @jsx jsx */
+import React, { useState } from 'react';
 import { jsx, css } from '@emotion/core';
-import { useState, Fragment } from 'react';
 import { color, typeface } from '../../styles';
 import Link from '../Link';
 
@@ -43,7 +43,7 @@ const UserLogoutMenu: React.FunctionComponent<Props> = ({
   `;
 
   return (
-    <Fragment>
+    <div>
       <button
         type="button"
         css={style}
@@ -57,7 +57,7 @@ const UserLogoutMenu: React.FunctionComponent<Props> = ({
           Log Out
         </Link>
       )}
-    </Fragment>
+    </div>
   );
 };
 export default UserLogoutMenu;
