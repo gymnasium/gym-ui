@@ -37,7 +37,9 @@ storiesOf('NavBar', module)
       return (
         <NavBar
           rightContent={navElements}
-          leftContent={<GymLogo backgroundColor="transparent" />}
+          leftContent={
+            <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+          }
         />
       );
     }
@@ -49,7 +51,9 @@ storiesOf('NavBar', module)
         <NavBar
           backgroundColor={color.grey.dark}
           rightContent={navElements}
-          leftContent={<GymLogo backgroundColor="transparent" />}
+          leftContent={
+            <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+          }
         />
       );
     }

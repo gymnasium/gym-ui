@@ -24,8 +24,16 @@ Props): React.ReactElement => {
   const rightContent = (
     <Fragment>
       {isLoggedIn && <UserLogoutMenu userId={userId} logoutUrl={logoutUrl} />}
-      <GymIcon iconIndex={0} />
-      <GymIcon iconIndex={1} />
+      <GymIcon
+        name="Aquent Icon"
+        src="https://thegymnasium.com/static/gymnasium/images/aquent-icon.56d05be37e9a.png"
+        href="https://www.aquent.com"
+      />
+      <GymIcon
+        name="Vitamin T Icon"
+        src="https://thegymnasium.com/static/gymnasium/images/vitamin-t-icon.32e5d567b8ca.png"
+        href="https://vitamintalent.com/"
+      />
     </Fragment>
   );
   return (

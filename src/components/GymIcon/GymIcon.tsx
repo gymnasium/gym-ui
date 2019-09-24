@@ -1,17 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import aquentIcon from '../../images/aquent-icon.56d05be37e9a.png';
-import vitaminTIcon from '../../images/vitamin-t-icon.32e5d567b8ca.png';
 import Link from '../Link';
 
-const icons = [
-  { name: 'Aquent Icon', src: aquentIcon, href: 'https://www.aquent.com' },
-  {
-    name: 'Vitamin T Icon',
-    src: vitaminTIcon,
-    href: 'https://vitamintalent.com/',
-  },
-];
 const style = css`
   filter: grayscale(1);
   :hover {
@@ -21,19 +11,27 @@ const style = css`
 
 interface Props {
   /**
-   * Predefined icon index:
-   * 0 for Aquent,
-   * 1 for Vitamin T
+   * Icon name will appear as the link alt text
    */
-  iconIndex: number;
+  name: string;
+  /**
+   * src is the URL of the icon image
+   */
+  src: string;
+  /**
+   * href is the target URL when the icon is clicked
+   */
+  href: string;
 }
 
 const GymIcon: React.FunctionComponent<Props> = ({
-  iconIndex,
+  name,
+  src,
+  href,
 }: Props): React.ReactElement => {
   return (
-    <Link css={style} isLight to={icons[iconIndex].href}>
-      <img src={icons[iconIndex].src} alt={icons[iconIndex].name} />
+    <Link css={style} isLight to={href}>
+      <img src={src} alt={name} />
     </Link>
   );
 };

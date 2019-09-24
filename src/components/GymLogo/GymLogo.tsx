@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import gymLogo from '../../images/gymnasium-logo-white.svg';
 
 interface Props {
+  /**
+   * The image URL
+   */
+  src: string;
   /**
    * Logo width override
    */
@@ -21,6 +24,7 @@ interface Props {
  * `GymLogo` is the standard Gymnasium logo
  */
 const GymLogo: React.FunctionComponent<Props> = ({
+  src,
   width = '200px',
   height = '23px',
   backgroundColor = 'transparent',
@@ -34,8 +38,7 @@ const GymLogo: React.FunctionComponent<Props> = ({
     <div css={style}>
       <img
         alt="Aquent Gymnasium"
-        srcSet={gymLogo}
-        src={gymLogo}
+        src={src}
         width={width}
         height={height}
         role="heading"
