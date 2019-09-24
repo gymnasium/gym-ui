@@ -18,8 +18,6 @@ interface Props {
   height?: string;
   /** Show Gymnasium Logo */
   showLogo?: boolean;
-  /** The position of the logo (if shown) */
-  logoPosition?: 'left' | 'right';
 }
 
 const alignMap = { left: 'flex-start', right: 'flex-end', center: 'center' };
@@ -29,18 +27,17 @@ const alignMap = { left: 'flex-start', right: 'flex-end', center: 'center' };
  */
 const NavBar: React.FunctionComponent<Props> = ({
   children,
-  justifyContent = 'left',
+  justifyContent = 'right',
   backgroundColor = color.black,
   height = '4.5rem',
   showLogo = false,
-  logoPosition = 'right',
 }: Props): React.ReactElement => {
   const baseStyle = css`
     height: ${height};
     background-color: ${backgroundColor};
     display: flex;
     align-items: center;
-    flex-direction: ${logoPosition === 'left' ? 'row-reverse' : 'row'};
+    flex-direction: row-reverse;
     padding: 0 1rem;
   `;
 
@@ -57,8 +54,7 @@ const NavBar: React.FunctionComponent<Props> = ({
   `;
 
   const logoStyle = css`
-    margin-left: ${logoPosition === 'right' && `auto`};
-    margin-right: ${logoPosition === 'left' && `auto`};
+    margin-right: auto;
   `;
 
   return (

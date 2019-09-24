@@ -29,10 +29,10 @@ storiesOf('NavBar', module)
     }
   )
   .addWithJSX(
-    'default with logo',
+    'with logo',
     (): React.ReactElement => {
       return (
-        <NavBar showLogo logoPosition="right">
+        <NavBar showLogo>
           <Link isLight to="/courses">
             Courses
           </Link>
@@ -85,29 +85,10 @@ storiesOf('NavBar', module)
     }
   )
   .addWithJSX(
-    'right-justified',
+    'left-justified',
     (): React.ReactElement => {
       return (
-        <NavBar justifyContent="right">
-          <Link isLight to="/courses">
-            Courses
-          </Link>
-          <Link isLight to="/jobs">
-            Jobs
-          </Link>
-          <Link isLight to="/about">
-            About
-          </Link>
-          <Button to="/login">Log In</Button>
-        </NavBar>
-      );
-    }
-  )
-  .addWithJSX(
-    'right-justified with logo',
-    (): React.ReactElement => {
-      return (
-        <NavBar justifyContent="right" showLogo logoPosition="left">
+        <NavBar justifyContent="left">
           <Link isLight to="/courses">
             Courses
           </Link>
