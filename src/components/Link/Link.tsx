@@ -37,7 +37,6 @@ interface Props {
   rel?: string;
   title?: string;
   target?: string;
-  title?: string;
 }
 
 const Link: React.FunctionComponent<Props> = ({
