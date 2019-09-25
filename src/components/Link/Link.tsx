@@ -29,6 +29,10 @@ const lightStyle = css`
   }
 `;
 
+const activeStyle = css`
+  color: ${color.orange};
+`;
+
 interface Props {
   children: React.ReactNode;
   to: string;
@@ -37,6 +41,11 @@ interface Props {
   rel?: string;
   title?: string;
   target?: string;
+  /**
+   * Use isActive when the link needs to be highlighted
+   * for example if used as a navigation link and showing the selected page
+   */
+  isActive: boolean;
 }
 
 const Link: React.FunctionComponent<Props> = ({
@@ -44,11 +53,17 @@ const Link: React.FunctionComponent<Props> = ({
   to,
   isDark = false,
   isLight = false,
+  isActive = false,
   ...rest
 }: Props): React.ReactElement => (
   /* eslint-disable react/jsx-props-no-spreading */
   <a
-    css={[baseStyle, isDark && darkStyle, isLight && lightStyle]}
+    css={[
+      baseStyle,
+      isDark && darkStyle,
+      isLight && lightStyle,
+      isActive && activeStyle,
+    ]}
     href={to}
     {...rest}
   >
