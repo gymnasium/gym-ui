@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-fragments */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Fragment } from 'react';
