@@ -39,7 +39,7 @@ const NavBar: React.FunctionComponent<Props> = ({
 
   const navStyle = css`
     display: inline-flex;
-    flex-direction: 'row';
+    flex-direction: row;
     align-items: center;
     font-size: 1rem;
     width: fit-content;
