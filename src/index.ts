@@ -1,5 +1,6 @@
 import GymIcon from './components/GymIcon';
 import Button from './components/Button';
+import CourseNavigation from './components/CourseNavigation';
 import GymLogo from './components/GymLogo';
 import Link from './components/Link';
 import LinkWithImage from './components/LinkWithImage';
@@ -8,6 +9,7 @@ import BulletedList from './components/BulletedList';
 import ListItem from './components/ListItem';
 import PrimaryNavigation from './components/PrimaryNavigation';
 import UserLogoutMenu from './components/UserLogoutMenu';
+import SecondaryNavigation from './components/SecondaryNavigation';
 import TabbedContainer from './components/TabbedContainer';
 import { H1, H2, H3, H4 } from './components/Headings';
 import NavBar from './components/NavBar';
@@ -17,6 +19,7 @@ import Separator from './components/Separator';
 export {
   GymIcon,
   Button,
+  CourseNavigation,
   GymLogo,
   Link,
   LinkWithImage,
@@ -25,6 +28,7 @@ export {
   ListItem,
   PrimaryNavigation,
   UserLogoutMenu,
+  SecondaryNavigation,
   TabbedContainer,
   H1,
   H2,

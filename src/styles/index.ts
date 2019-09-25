@@ -1,5 +1,6 @@
 export const color = {
   /* colors */
+  trueblack: '#000',
   orange: '#f8971d',
   black: '#222222',
   white: '#ffffff',
