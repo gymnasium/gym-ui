@@ -34,3 +34,11 @@ export const typeface = {
   title: 'brandon-grotesque, Helvetica Neue, Helvetica, sans-serif',
   text: 'Helvetica Neue, Helvetica, sans-serif',
 };
+
+const breakpoints = [576, 768, 992, 1200];
+/**
+ * Media Queries (min-width)
+ */
+export const mediaqueries = breakpoints.map(
+  (bp): string => `@media (min-width: ${bp}px)`
+);

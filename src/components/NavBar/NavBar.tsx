@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
+import { mediaqueries } from '../../styles';
 
 interface Props {
   /**
@@ -29,22 +30,28 @@ const NavBar: React.FunctionComponent<Props> = ({
   height = '4.5rem',
 }: Props): React.ReactElement => {
   const baseStyle = css`
-    height: ${height};
     background-color: ${backgroundColor};
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    ${mediaqueries[0]} {
+      flex-direction: row;
+      height: ${height};
+      justify-content: space-between;
+    }
   `;
 
   const navStyle = css`
     display: inline-flex;
-    flex-direction: 'row';
+    flex-direction: row;
     align-items: center;
     font-size: 1rem;
-    width: fit-content;
+    width: 100%;
+    ${mediaqueries[0]} {
+      width: fit-content;
+    }
     > * {
-      margin: 0 1.25rem;
+      margin: 0.25rem 1.25rem;
     }
   `;
 
