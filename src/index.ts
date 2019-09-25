@@ -1,5 +1,6 @@
 import GymIcon from './components/GymIcon';
 import Button from './components/Button';
+import CourseNavigation from './components/CourseNavigation';
 import GymLogo from './components/GymLogo';
 import Link from './components/Link';
 import LinkWithImage from './components/LinkWithImage';
@@ -17,6 +18,7 @@ import Separator from './components/Separator';
 export {
   GymIcon,
   Button,
+  CourseNavigation,
   GymLogo,
   Link,
   LinkWithImage,
