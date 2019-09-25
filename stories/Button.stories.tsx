@@ -35,6 +35,7 @@ storiesOf('Button', module)
         <Button fullWidth onClick={onClickAction}>
           Full Width
         </Button>
+        <Button to="/">Link</Button>
       </>
     )
   )
@@ -73,4 +74,8 @@ storiesOf('Button', module)
         </Button>
       </div>
     )
+  )
+  .addWithJSX(
+    'hyperlink',
+    (): React.ReactElement => <Button to="/">Link</Button>
   );

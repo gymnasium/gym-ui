@@ -20,9 +20,20 @@ interface Props {
    */
   lightBorder?: boolean;
   /**
-   * Event fired when this button is clicked
+   * Callback for event fired when this button is clicked
    */
   onClick?(e: React.MouseEvent<HTMLElement>): void;
+  /**
+   * URL to set the button as an anchor/hyperlink
+   * When used, the button is turned into an anchor element
+   * In this case, the onClick callback will not be used
+   */
+  to?: string;
+  /**
+   * isSmall flag produces a smaller version of the button
+   * intended mainly for navigation bars
+   */
+  isSmall?: boolean;
 }
 
 /**
@@ -34,9 +45,12 @@ const Button: React.FunctionComponent<Props> = ({
   allCaps = false,
   lightBorder = false,
   onClick = (): void => {},
+  to = undefined,
+  isSmall = false,
 }: Props): React.ReactElement => {
   const style = css`
-    font: bold 1.4em/1 ${typeface.text};
+    text-decoration: none;
+    font: bold 1.2rem/1 ${typeface.text};
     background-color: ${color.orange};
     color: ${color.white};
     border: 0;
@@ -52,13 +66,31 @@ const Button: React.FunctionComponent<Props> = ({
     text-transform: ${allCaps && 'uppercase'};
     width: ${fullWidth && '100%'};
     border: ${lightBorder && `2px solid ${color.white} !important`};
+    transition: all 0.1s linear 0s;
     :hover {
       background-color: ${color.grey.light};
     }
   `;
 
+  const smallStyle = css`
+    font: bold 0.9rem/1 ${typeface.text};
+  `;
+
+  if (to)
+    return (
+      // Hyperlink
+      <a css={[style, isSmall && smallStyle]} type="button" href={to}>
+        {children}
+      </a>
+    );
+
   return (
-    <button css={style} type="button" onClick={onClick}>
+    // Real button
+    <button
+      css={[style, isSmall && smallStyle]}
+      type="button"
+      onClick={onClick}
+    >
       {children}
     </button>
   );

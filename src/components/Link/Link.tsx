@@ -35,6 +35,7 @@ interface Props {
   isDark?: boolean;
   isLight?: boolean;
   rel?: string;
+  title?: string;
   target?: string;
 }
 
