@@ -8,6 +8,7 @@ import BulletedList from './components/BulletedList';
 import ListItem from './components/ListItem';
 import PrimaryNavigation from './components/PrimaryNavigation';
 import UserLogoutMenu from './components/UserLogoutMenu';
+import SecondaryNavigation from './components/SecondaryNavigation';
 import TabbedContainer from './components/TabbedContainer';
 import { H1, H2, H3, H4 } from './components/Headings';
 import NavBar from './components/NavBar';
@@ -25,6 +26,7 @@ export {
   ListItem,
   PrimaryNavigation,
   UserLogoutMenu,
+  SecondaryNavigation,
   TabbedContainer,
   H1,
   H2,

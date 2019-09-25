@@ -39,7 +39,7 @@ Props): React.ReactElement => {
   );
   return (
     <NavBar
-      backgroundColor={color.black}
+      backgroundColor={color.trueblack}
       height="50px"
       leftContent={leftContent}
       rightContent={rightContent}
