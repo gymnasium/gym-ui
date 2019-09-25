@@ -46,6 +46,7 @@ const Link: React.FunctionComponent<Props> = ({
   isLight = false,
   ...rest
 }: Props): React.ReactElement => (
+  /* eslint-disable react/jsx-props-no-spreading */
   <a
     css={[baseStyle, isDark && darkStyle, isLight && lightStyle]}
     href={to}
@@ -53,6 +54,7 @@ const Link: React.FunctionComponent<Props> = ({
   >
     {children}
   </a>
+  /* eslint-enable react/jsx-props-no-spreading */
 );
 
 export default Link;
