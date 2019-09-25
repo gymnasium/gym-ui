@@ -10,7 +10,7 @@ import Link from '../Link';
 interface Props {
   title: string;
   colorCode?: string;
-  menuLinks?: { name: string; url: string }[];
+  menuLinks?: { name: string; url: string; isActive?: boolean }[];
 }
 
 const CourseNavigation: React.FunctionComponent<Props> = ({
@@ -23,7 +23,7 @@ const CourseNavigation: React.FunctionComponent<Props> = ({
     menuLinks &&
     menuLinks.map(
       (item): React.ReactNode => (
-        <Link isDark key={item.name} to={item.url}>
+        <Link isDark key={item.name} to={item.url} isActive={item.isActive}>
           {item.name}
         </Link>
       )

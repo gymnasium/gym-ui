@@ -10,14 +10,14 @@ storiesOf('CourseNavigation', module)
     component: CourseNavigation,
   })
   .addWithJSX(
-    'course',
+    'course with syllabus active',
     (): React.ReactElement => (
       <CourseNavigation
         title="Introducing Sketch for UX and UI"
         colorCode={color.teal}
         menuLinks={[
           { name: 'Lessons', url: '/lessons-1122' },
-          { name: 'Syllabus', url: '/syllabus-1122' },
+          { name: 'Syllabus', url: '/syllabus-1122', isActive: true },
           { name: 'Instructor', url: '/instructor-7' },
         ]}
       />
