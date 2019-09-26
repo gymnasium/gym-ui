@@ -45,7 +45,7 @@ interface Props {
    * Use isActive when the link needs to be highlighted
    * for example if used as a navigation link and showing the selected page
    */
-  isActive: boolean;
+  isActive?: boolean;
 }
 
 const Link: React.FunctionComponent<Props> = ({
