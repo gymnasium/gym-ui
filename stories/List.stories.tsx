@@ -32,20 +32,11 @@ storiesOf('List', module)
               location="Charlotte, NC"
               url="https://aquent.com/find-work/151781?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content"
             />
-            <ListItem class="row gym-microservice-job-listing">
-              <a
-                href="https://aquent.com/find-work/151702?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div class="job-post">
-                  <b class="job-title col-xs-8">
-                    Digital Marketing Product Manager
-                  </b>{' '}
-                  <em class="job-market col-xs-4 text-right">Charlotte, NC</em>
-                </div>
-              </a>
-            </ListItem>
+            <JobListItem
+              name="Digital Marketing Product Manager"
+              location="Charlotte, NC"
+              url="https://aquent.com/find-work/151702?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content"
+            />
           </List>
         </div>
       );
