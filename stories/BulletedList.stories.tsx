@@ -2,7 +2,7 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 
-import { BulletedList, ListItem } from '../src';
+import { BulletedList, BulletedListItem } from '../src';
 
 storiesOf('BulletedList', module)
   .addParameters({
@@ -14,10 +14,10 @@ storiesOf('BulletedList', module)
       const title = 'Skills covered';
       return (
         <BulletedList title={title}>
-          <ListItem>HTML basics</ListItem>
-          <ListItem>CSS basics</ListItem>
-          <ListItem>Bootstrap basics</ListItem>
-          <ListItem>And more...</ListItem>
+          <BulletedListItem>HTML basics</BulletedListItem>
+          <BulletedListItem>CSS basics</BulletedListItem>
+          <BulletedListItem>Bootstrap basics</BulletedListItem>
+          <BulletedListItem>And more...</BulletedListItem>
         </BulletedList>
       );
     }
@@ -26,10 +26,10 @@ storiesOf('BulletedList', module)
     'without title',
     (): React.ReactElement => (
       <BulletedList>
-        <ListItem>HTML basics</ListItem>
-        <ListItem>CSS basics</ListItem>
-        <ListItem>Bootstrap basics</ListItem>
-        <ListItem>And more...</ListItem>
+        <BulletedListItem>HTML basics</BulletedListItem>
+        <BulletedListItem>CSS basics</BulletedListItem>
+        <BulletedListItem>Bootstrap basics</BulletedListItem>
+        <BulletedListItem>And more...</BulletedListItem>
       </BulletedList>
     )
   )
@@ -37,14 +37,14 @@ storiesOf('BulletedList', module)
     'with internal markup',
     (): React.ReactElement => (
       <BulletedList>
-        <ListItem>Some content Here</ListItem>
-        <ListItem>
+        <BulletedListItem>Some content Here</BulletedListItem>
+        <BulletedListItem>
           with <em>any</em> amount of markup added should <u>render</u>
-        </ListItem>
-        <ListItem>
+        </BulletedListItem>
+        <BulletedListItem>
           <p>even with a few block type elements</p>
           <p>within</p>
-        </ListItem>
+        </BulletedListItem>
       </BulletedList>
     )
   );

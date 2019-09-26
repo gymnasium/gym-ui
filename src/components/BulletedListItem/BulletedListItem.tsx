@@ -18,11 +18,11 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const ListItem: React.FunctionComponent<Props> = ({
+const BulletedListItem: React.FunctionComponent<Props> = ({
   children,
 }: Props): React.ReactElement => (
   <li css={style}>
     <span>{children}</span>
   </li>
 );
-export default ListItem;
+export default BulletedListItem;

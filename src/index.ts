@@ -6,7 +6,7 @@ import Link from './components/Link';
 import LinkWithImage from './components/LinkWithImage';
 import Card from './components/Card';
 import BulletedList from './components/BulletedList';
-import ListItem from './components/ListItem';
+import BulletedListItem from './components/BulletedListItem';
 import PrimaryNavigation from './components/PrimaryNavigation';
 import UserLogoutMenu from './components/UserLogoutMenu';
 import SecondaryNavigation from './components/SecondaryNavigation';
@@ -25,7 +25,7 @@ export {
   LinkWithImage,
   Card,
   BulletedList,
-  ListItem,
+  BulletedListItem,
   PrimaryNavigation,
   UserLogoutMenu,
   SecondaryNavigation,
