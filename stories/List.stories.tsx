@@ -22,21 +22,33 @@ storiesOf('List', module)
         </Link>
       );
 
-      const jobs = [];
+      const jobs: {
+        name: string;
+        location: string;
+        url: string;
+      }[] = [
+        {
+          name: 'Project Manager',
+          location: 'Charlotte, NC',
+          url:
+            'https://aquent.com/find-work/151781?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content',
+        },
+        {
+          name: 'Digital Marketing Product Manager',
+          location: 'Charlotte, NC',
+          url:
+            'https://aquent.com/find-work/151702?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content',
+        },
+      ];
 
       return (
         <div style={{ width: '400px' }}>
           <List headerContent={headerContent} footerContent={footerContent}>
-            <JobListItem
-              name="Project Manager"
-              location="Charlotte, NC"
-              url="https://aquent.com/find-work/151781?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content"
-            />
-            <JobListItem
-              name="Digital Marketing Product Manager"
-              location="Charlotte, NC"
-              url="https://aquent.com/find-work/151702?utm_source=thegymnasium.com&amp;utm_medium=web&amp;utm_campaign=job-module#content"
-            />
+            {jobs.map(
+              (item): React.ReactElement => (
+                <JobListItem {...item} key={item.url} />
+              )
+            )}
           </List>
         </div>
       );
