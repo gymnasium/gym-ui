@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color, typeface } from '../../styles';
 
 const style = css``;
 

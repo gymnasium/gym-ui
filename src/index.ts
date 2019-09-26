@@ -7,6 +7,7 @@ import LinkWithImage from './components/LinkWithImage';
 import Card from './components/Card';
 import List from './components/List';
 import ListItem from './components/ListItem';
+import JobListItem from './components/JobListItem';
 import BulletedList from './components/BulletedList';
 import BulletedListItem from './components/BulletedListItem';
 import PrimaryNavigation from './components/PrimaryNavigation';
@@ -30,6 +31,7 @@ export {
   BulletedListItem,
   List,
   ListItem,
+  JobListItem,
   PrimaryNavigation,
   UserLogoutMenu,
   SecondaryNavigation,

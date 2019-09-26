@@ -3,16 +3,9 @@ import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
 const style = css`
-  border: 1px red solid;
   font: 700 0.8rem/1.3 ${typeface.title};
   color: ${color.black};
   border-bottom: 1px dashed ${color.grey.regular};
-  /* padding: 1rem; */
-  /* letter-spacing: 0.06em; */
-  /* word-spacing: 0.05em; */
-  /* margin-bottom: 1rem;
-  margin-left: 1rem;
-  margin-top: 1rem; */
 
   ul {
     padding: 0rem;
