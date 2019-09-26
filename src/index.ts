@@ -5,8 +5,11 @@ import GymLogo from './components/GymLogo';
 import Link from './components/Link';
 import LinkWithImage from './components/LinkWithImage';
 import Card from './components/Card';
-import BulletedList from './components/BulletedList';
+import List from './components/List';
 import ListItem from './components/ListItem';
+import JobListItem from './components/JobListItem';
+import BulletedList from './components/BulletedList';
+import BulletedListItem from './components/BulletedListItem';
 import PrimaryNavigation from './components/PrimaryNavigation';
 import UserLogoutMenu from './components/UserLogoutMenu';
 import SecondaryNavigation from './components/SecondaryNavigation';
@@ -25,7 +28,10 @@ export {
   LinkWithImage,
   Card,
   BulletedList,
+  BulletedListItem,
+  List,
   ListItem,
+  JobListItem,
   PrimaryNavigation,
   UserLogoutMenu,
   SecondaryNavigation,

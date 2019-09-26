@@ -1,18 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import { color, typeface } from '../../styles';
 
-const style = css`
-  display: list-item;
-  list-style: disc;
-  color: ${color.orange};
-  margin-top: 0.3em;
-  margin-left: 0;
-  > span {
-    font: 1em/1.4 ${typeface.text};
-    color: ${color.black};
-  }
-`;
+const style = css``;
 
 interface Props {
   children?: React.ReactNode;
@@ -20,9 +9,5 @@ interface Props {
 
 const ListItem: React.FunctionComponent<Props> = ({
   children,
-}: Props): React.ReactElement => (
-  <li css={style}>
-    <span>{children}</span>
-  </li>
-);
+}: Props): React.ReactElement => <li css={style}>{children}</li>;
 export default ListItem;
