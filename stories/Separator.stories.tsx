@@ -1,10 +1,9 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import { Separator } from '../src';
 
-storiesOf('Separator', module).addWithJSX(
-  'example',
-  (): React.ReactElement => <Separator />
-);
+export default {
+  title: 'Separator',
+};
+
+export const example = (): React.ReactElement => <Separator />;
