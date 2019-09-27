@@ -6,10 +6,10 @@ const style = css`
   display: list-item;
   list-style: disc;
   color: ${color.orange};
-  margin-top: 0.3em;
+  margin-top: 0.3rem;
   margin-left: 0;
   > span {
-    font: 1em/1.4 ${typeface.text};
+    font: 1rem/1.4 ${typeface.text};
     color: ${color.black};
   }
 `;
