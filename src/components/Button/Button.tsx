@@ -54,8 +54,8 @@ const Button: React.FunctionComponent<Props> = ({
     background-color: ${color.orange};
     color: ${color.white};
     border: 0;
-    padding: 1em;
-    border-radius: 0.125em;
+    padding: 0.8rem;
+    border-radius: 0.1rem;
     box-shadow: none;
     text-shadow: none;
     background-image: none;
