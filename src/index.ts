@@ -18,6 +18,7 @@ import { H1, H2, H3, H4 } from './components/Headings';
 import NavBar from './components/NavBar';
 import FeaturedContent from './components/FeaturedContent';
 import Separator from './components/Separator';
+import TextField from './components/TextField';
 
 export {
   GymIcon,
@@ -43,4 +44,5 @@ export {
   NavBar,
   FeaturedContent,
   Separator,
+  TextField,
 };
