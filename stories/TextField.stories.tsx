@@ -40,3 +40,42 @@ export const userName = (): React.ReactElement => {
     </>
   );
 };
+
+export const emailAddress = (): React.ReactElement => {
+  const [emailVal, setEmailVal] = useState('');
+  return (
+    <>
+      <TextField
+        id="emailAddress"
+        label="Email Address *"
+        type="email"
+        valueState={emailVal}
+        valueSetter={setEmailVal}
+        isRequired
+      />
+      <i>
+        <p>The value of the input field is: {emailVal}</p>
+      </i>
+    </>
+  );
+};
+
+export const password = (): React.ReactElement => {
+  const [passwordVal, setPasswordVal] = useState('');
+  return (
+    <>
+      <TextField
+        id="password"
+        label="Password *"
+        type="password"
+        valueState={passwordVal}
+        valueSetter={setPasswordVal}
+        minLength={6}
+        maxLength={20}
+      />
+      <i>
+        <p>The value of the input field is: {passwordVal}</p>
+      </i>
+    </>
+  );
+};

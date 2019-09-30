@@ -68,9 +68,9 @@ interface Props {
   placeholder?: string;
   /**
    * Expected type of input data
-   * text, email, password
+   * e.g. text, email, password
    */
-  type?: 'text' | 'email' | 'password';
+  type?: string;
   /**
    * State value of the input text field
    * construct the state following this example:
@@ -90,7 +90,7 @@ interface Props {
   /**
    * Additional helper text to show under the input field
    */
-  helperText: React.ReactNode;
+  helperText?: React.ReactNode;
   /**
    * Minimum Length (characters)
    */
