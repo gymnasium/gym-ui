@@ -8,7 +8,7 @@ import { color } from '../src/styles';
 const onClickAction = action('Button clicked');
 
 export default {
-  title: 'Gym UI|Button',
+  title: 'Gym UI|Components/Button',
 
   parameters: {
     component: Button,
