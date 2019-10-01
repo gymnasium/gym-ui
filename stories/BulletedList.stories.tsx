@@ -3,7 +3,7 @@ import React from 'react';
 import { BulletedList, BulletedListItem } from '../src';
 
 export default {
-  title: 'BulletedList',
+  title: 'Gym UI|BulletedList',
 
   parameters: {
     component: BulletedList,

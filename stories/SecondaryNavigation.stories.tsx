@@ -3,7 +3,7 @@ import React from 'react';
 import { SecondaryNavigation } from '../src';
 
 export default {
-  title: 'SecondaryNavigation',
+  title: 'Gym UI|SecondaryNavigation',
 
   parameters: {
     component: SecondaryNavigation,

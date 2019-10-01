@@ -8,7 +8,7 @@ import {
 import { color } from '../src/styles';
 
 export default {
-  title: 'Combined Navigation Demo',
+  title: 'Gym UI|Combined Navigation Demo',
 };
 
 export const primarySecondaryAndCourseNavigationLoggedIn = (): React.ReactElement => (

@@ -4,7 +4,7 @@ import { CourseNavigation } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'CourseNavigation',
+  title: 'Gym UI|CourseNavigation',
 
   parameters: {
     component: CourseNavigation,

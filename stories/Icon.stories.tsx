@@ -4,7 +4,7 @@ import { GymIcon } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'GymIcon',
+  title: 'Gym UI|GymIcon',
 
   parameters: {
     component: GymIcon,

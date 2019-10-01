@@ -4,7 +4,7 @@ import { TabbedContainer } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'TabbedContainer',
+  title: 'Gym UI|TabbedContainer',
 
   parameters: {
     component: TabbedContainer,

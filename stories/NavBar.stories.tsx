@@ -19,7 +19,7 @@ const navElements = (
 );
 
 export default {
-  title: 'NavBar',
+  title: 'Gym UI|NavBar',
 
   parameters: {
     component: NavBar,

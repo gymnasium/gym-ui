@@ -4,7 +4,7 @@ import { FeaturedContent, Link, Separator, Button, H2, H3, H4 } from '../src';
 import { typeface, color } from '../src/styles';
 
 export default {
-  title: 'FeaturedContent',
+  title: 'Gym UI|FeaturedContent',
 
   parameters: {
     component: FeaturedContent,
