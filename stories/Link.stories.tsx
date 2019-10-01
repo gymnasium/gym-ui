@@ -4,7 +4,7 @@ import { Link } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'Gym UI|Link',
+  title: 'Gym UI|Components/Link',
 
   parameters: {
     component: Link,

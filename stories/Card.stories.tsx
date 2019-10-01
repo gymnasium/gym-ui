@@ -4,7 +4,7 @@ import { Card } from '../src';
 import { typeface, color } from '../src/styles';
 
 export default {
-  title: 'Gym UI|Card',
+  title: 'Gym UI|Containers/Card',
 
   parameters: {
     component: Card,

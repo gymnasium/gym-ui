@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import { NavBar, Link, Button, GymLogo } from '../src';
 import { color } from '../src/styles';
@@ -19,7 +19,7 @@ const navElements = (
 );
 
 export default {
-  title: 'Gym UI|NavBar',
+  title: 'Gym UI|Navigation/NavBar',
 
   parameters: {
     component: NavBar,
@@ -73,7 +73,7 @@ export const heightOverride = (): React.ReactElement => {
       height="3rem"
       rightContent={
         // eslint-disable-next-line react/jsx-wrap-multilines
-        <Fragment>
+        <>
           <Link isLight to="/courses">
             Courses
           </Link>
@@ -83,7 +83,7 @@ export const heightOverride = (): React.ReactElement => {
           <Link isLight to="/about">
             About
           </Link>
-        </Fragment>
+        </>
       }
     />
   );

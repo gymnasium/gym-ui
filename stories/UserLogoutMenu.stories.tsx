@@ -4,7 +4,7 @@ import { UserLogoutMenu } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'Gym UI|UserLogoutMenu',
+  title: 'Gym UI|Components/UserLogoutMenu',
 
   parameters: {
     component: UserLogoutMenu,
