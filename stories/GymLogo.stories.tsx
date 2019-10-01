@@ -1,17 +1,21 @@
 import React from 'react';
+import { themes } from '@storybook/theming';
 
 import { GymLogo } from '../src';
 import { color } from '../src/styles';
+import gymTheme from '../.storybook/gymTheme';
 
 export default {
   title: 'Gym UI|Components/GymLogo',
 
   parameters: {
     component: GymLogo,
-
-    backgrounds: [
-      { name: 'Nav dark grey', value: color.grey.dark, default: true },
-    ],
+    options: {
+      theme: themes.dark,
+    },
+    // backgrounds: [
+    //   { name: 'Nav dark grey', value: color.grey.dark, default: true },
+    // ],
   },
 };
 

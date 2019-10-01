@@ -2,6 +2,7 @@ import React from 'react';
 
 import { NavBar, Link, Button, GymLogo } from '../src';
 import { color } from '../src/styles';
+import { themes } from '@storybook/theming';
 
 const navElements = (
   <>
@@ -23,7 +24,10 @@ export default {
 
   parameters: {
     component: NavBar,
-    backgrounds: [{ name: 'Nav black', value: color.black, default: true }],
+    // backgrounds: [{ name: 'Nav black', value: color.black, default: true }],
+    options: {
+      theme: themes.dark,
+    },
   },
 };
 

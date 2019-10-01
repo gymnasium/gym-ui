@@ -21,7 +21,7 @@ interface Props {
 }
 
 /**
- * `GymLogo` is the standard Gymnasium logo
+ * The standard Gymnasium logo
  */
 const GymLogo: React.FunctionComponent<Props> = ({
   src,

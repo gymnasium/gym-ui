@@ -2,13 +2,17 @@ import React from 'react';
 
 import { GymIcon } from '../src';
 import { color } from '../src/styles';
+import { themes } from '@storybook/theming';
 
 export default {
   title: 'Gym UI|Components/GymIcon',
 
   parameters: {
     component: GymIcon,
-    backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
+    // backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
+    options: {
+      theme: themes.dark,
+    },
   },
 };
 
