@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { List, ListItem, Link, JobListItem } from '../src';
-import { url } from 'inspector';
 
 export default {
-  title: 'List',
+  title: 'Gym UI|Components/List',
 
   parameters: {
     component: List,

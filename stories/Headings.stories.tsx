@@ -4,7 +4,7 @@ import { H1, H2, H3, H4 } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'Headings',
+  title: 'Gym UI|Components/Headings',
 };
 
 export const defaultStory = (): React.ReactElement => (

@@ -4,7 +4,7 @@ import { LinkWithImage, H2, Button } from '../src';
 import { color } from '../src/styles';
 
 export default {
-  title: 'LinkWithImage',
+  title: 'Gym UI|Components/LinkWithImage',
 
   parameters: {
     component: LinkWithImage,
