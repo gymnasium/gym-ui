@@ -20,6 +20,8 @@ import FeaturedContent from './components/FeaturedContent';
 import Separator from './components/Separator';
 import TextField from './components/TextField';
 
+import { color, typeface } from './styles';
+
 export {
   GymIcon,
   Button,
@@ -45,4 +47,6 @@ export {
   FeaturedContent,
   Separator,
   TextField,
+  color,
+  typeface,
 };
