@@ -61,15 +61,14 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - percy-tests:
-          requires:
-            - build
-
-          filters:
-            branches:
-              # ignore PRs from dependabot so we don't boil off percy time needlessly
-              ignore: /^dependabot/
-      - percy/finalize_all:
-          requires:
-            - build
-            - percy-tests
+      # - percy-tests:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         # ignore PRs from dependabot so we don't boil off percy time needlessly
+      #         ignore: /^dependabot/
+      # - percy/finalize_all:
+      #     requires:
+      #       - build
+      #       - percy-tests
