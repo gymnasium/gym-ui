@@ -1,15 +1,25 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import { SecondaryNavigation } from '../src';
 
-storiesOf('SecondaryNavigation', module)
-  .addParameters({
+export default {
+  title: 'Gym UI|Navigation/SecondaryNavigation',
+
+  parameters: {
     component: SecondaryNavigation,
-  })
-  .addWithJSX('logged out', (): React.ReactElement => <SecondaryNavigation />)
-  .addWithJSX(
-    'logged in',
-    (): React.ReactElement => <SecondaryNavigation isLoggedIn />
-  );
+  },
+};
+
+export const loggedOut = (): React.ReactElement => <SecondaryNavigation />;
+
+loggedOut.story = {
+  name: 'logged out',
+};
+
+export const loggedIn = (): React.ReactElement => (
+  <SecondaryNavigation isLoggedIn />
+);
+
+loggedIn.story = {
+  name: 'logged in',
+};

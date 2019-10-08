@@ -3,20 +3,19 @@ import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
 const titleStyle = css`
-  font: 900 1em/1.2 ${typeface.title};
+  font: 900 1rem/1.2 ${typeface.title};
   text-transform: uppercase;
-  margin-left: 3.6em;
-  margin-top: 1em;
+  margin-left: 2.4rem;
+  margin-top: 1rem;
 `;
 
 const style = css`
-  font: 1em/1.2 ${typeface.title};
+  font: 1rem/1.2 ${typeface.title};
   color: ${color.black};
-  letter-spacing: 0.06em;
-  word-spacing: 0.05em;
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
-  margin-left: 1.2em;
+  letter-spacing: 0.06rem;
+  word-spacing: 0.05rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
 `;
 
 interface Props {

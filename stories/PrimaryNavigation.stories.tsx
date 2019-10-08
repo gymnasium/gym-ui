@@ -1,17 +1,25 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
-
 import { PrimaryNavigation } from '../src';
 
-storiesOf('PrimaryNavigation', module)
-  .addParameters({
+export default {
+  title: 'Gym UI|Navigation/PrimaryNavigation',
+
+  parameters: {
     component: PrimaryNavigation,
-  })
-  .addWithJSX('logged out', (): React.ReactElement => <PrimaryNavigation />)
-  .addWithJSX(
-    'logged in',
-    (): React.ReactElement => (
-      <PrimaryNavigation isLoggedIn userId="Ali" logoutUrl="/logout" />
-    )
-  );
+  },
+};
+
+export const loggedOut = (): React.ReactElement => <PrimaryNavigation />;
+
+loggedOut.story = {
+  name: 'logged out',
+};
+
+export const loggedIn = (): React.ReactElement => (
+  <PrimaryNavigation isLoggedIn userId="Ali" logoutUrl="/logout" />
+);
+
+loggedIn.story = {
+  name: 'logged in',
+};

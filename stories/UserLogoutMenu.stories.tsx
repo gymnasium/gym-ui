@@ -1,20 +1,26 @@
 import React from 'react';
-
-import { storiesOf } from '@storybook/react';
+import { themes } from '@storybook/theming';
 
 import { UserLogoutMenu } from '../src';
-import { color } from '../src/styles';
 
-storiesOf('UserLogoutMenu', module)
-  .addParameters({
+export default {
+  title: 'Gym UI|Components/UserLogoutMenu',
+
+  parameters: {
     component: UserLogoutMenu,
-    backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
-  })
-  .addWithJSX(
-    'default',
-    (): React.ReactElement => (
-      <div>
-        <UserLogoutMenu userId="Ali" logoutUrl="/logout" />
-      </div>
-    )
-  );
+    // backgrounds: [{ name: 'Nav black', value: color.grey[900], default: true }],
+    options: {
+      theme: themes.dark,
+    },
+  },
+};
+
+export const defaultStory = (): React.ReactElement => (
+  <div>
+    <UserLogoutMenu userId="Ali" logoutUrl="/logout" />
+  </div>
+);
+
+defaultStory.story = {
+  name: 'default',
+};

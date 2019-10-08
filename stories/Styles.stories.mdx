@@ -1,0 +1,49 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Gym UI|Utilities/Styles" />
+
+# Color
+
+A color pallet is defined in `/styles/index.tsx` and can be imported as follows:
+`import { typeface } from '../../styles'`
+
+#### Usage examples in CSS-in-JS:
+
+```
+background-color: ${color.orange};
+background-color: ${color.grey.light};
+```
+
+For full list of colors, refer to `src/styles/index.tsx`
+
+# Typeface
+
+Similar to colors, standard typeface fonts are defined in `/styles/index.tsx` and can be imported as follows:
+`import { typeface } from '../../styles'`
+
+Currently, there are two typefaces defined:
+
+- `title: 'brandon-grotesque, Josefin Sans, Helvetica Neue, Helvetica, sans-serif'`
+- `text: 'Helvetica Neue, Helvetica, sans-serif'`
+
+#### Usage examples with CSS-in-JS:
+
+```
+font: bold 1.2rem/1.4 ${typeface.title};
+```
+
+# Fonts
+
+This library uses a licensed font called `brandon-grotesque`.  
+If you don't have this font, the UI components will fall back to use Google font called `Josefin Sans` which is close enough.
+
+To make `Josefin Sans` avaiable, insert the following into the `<head>` of your HTML document:
+
+```
+<link
+  href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+  rel="stylesheet"
+/>
+```
+
+Next in line fallback fonts are `Helvetica Neue`, `Helvetica`, and `sans-serif`.
