@@ -13,6 +13,7 @@
     "clean": "rm -rf dist",
     "watch": "tsc -w -p .",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "start": "start-storybook -p 6006",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
