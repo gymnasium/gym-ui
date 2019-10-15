@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-fragments */
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import { Fragment } from 'react';
 import { color } from '../../styles';
 import Button from '../Button';
@@ -12,11 +12,20 @@ interface Props {
   isLoggedIn?: boolean;
 }
 
+const logoLinkStyle = css`
+  &:hover {
+    text-decoration: none;
+    border-bottom: none;
+  }
+`;
+
 const SecondaryNavigation: React.FunctionComponent<Props> = ({
   isLoggedIn = false,
 }: Props): React.ReactElement => {
   const leftContent = (
-    <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+    <Link css={logoLinkStyle} to="/">
+      <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+    </Link>
   );
   const rightContent = (
     <Fragment>

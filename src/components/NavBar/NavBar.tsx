@@ -1,6 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 
+import CONFIG from '../../util/config';
+
 interface Props {
   /**
    * NavBar content that is left aligned
@@ -28,9 +30,15 @@ const NavBar: React.FunctionComponent<Props> = ({
   backgroundColor = 'transparent',
   height = '4.5rem',
 }: Props): React.ReactElement => {
-  const baseStyle = css`
-    height: ${height};
+  const backgroundStyle = css`
     background-color: ${backgroundColor};
+    display: flex;
+    justify-content: center;
+  `;
+  const contentContainerStyle = css`
+    flex-grow: 1;
+    max-width: ${CONFIG.DISPLAY.MAX_PAGE_WIDTH}px;
+    height: ${height};
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -56,9 +64,11 @@ const NavBar: React.FunctionComponent<Props> = ({
   `;
 
   return (
-    <div css={baseStyle}>
-      <div css={[navStyle, leftStyle]}>{leftContent}</div>
-      <div css={[navStyle, rightStyle]}>{rightContent}</div>
+    <div css={backgroundStyle}>
+      <div css={contentContainerStyle}>
+        <div css={[navStyle, leftStyle]}>{leftContent}</div>
+        <div css={[navStyle, rightStyle]}>{rightContent}</div>
+      </div>
     </div>
   );
 };
