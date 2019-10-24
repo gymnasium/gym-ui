@@ -38,7 +38,7 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.21",
+    "@emotion/core": "^10.0.22",
     "react": "^16.11.0",
     "react-dom": "^16.10.2"
   },
