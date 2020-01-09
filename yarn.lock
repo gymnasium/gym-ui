@@ -1512,7 +1512,7 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@storybook/addon-a11y@^5.3.0-beta.13":
+"@storybook/addon-a11y@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-5.3.0-rc.12.tgz#968077ec83c30236cf8296ba06a8f2e9cce8de91"
   integrity sha512-0x65bCPbPKUJ3Zisuny5pVXlpY2TiquyTfBtG72V/91Fo1eQ6FaafmthPEv26yR5/rcp5ByB6z/YtYO+gk5yXg==
@@ -1534,7 +1534,7 @@
     ts-dedent "^1.1.0"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-actions@^5.3.0-beta.13":
+"@storybook/addon-actions@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-5.3.0-rc.12.tgz#26b4eb731fd1fd695019789b7fbe7fa502569b22"
   integrity sha512-CwiA3wMGRBFJoN0hXLyWKpJpZZT9uy9Ot4zYvhhmfT/s8hBWLbjD52nCsgaJxJf25gZdQmwvfxt7moAEbbgT4g==
@@ -1554,7 +1554,7 @@
     react-inspector "^4.0.0"
     uuid "^3.3.2"
 
-"@storybook/addon-backgrounds@^5.3.0-beta.13":
+"@storybook/addon-backgrounds@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-backgrounds/-/addon-backgrounds-5.3.0-rc.12.tgz#67ff51d90a97ac331f0423a8eeabf99d371539df"
   integrity sha512-ohk4FfNXfDbMfu8N2VAhjT1cF3oZ4auqplNm/9TmgEpPKyn90yJLw/qSV6kUayffZVv3B4JqgJnn++tiJ0+yIQ==
@@ -1570,7 +1570,7 @@
     react "^16.8.3"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-docs@^5.3.0-beta.13":
+"@storybook/addon-docs@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.3.0-rc.12.tgz#4e41d797b5c23b431a5c2da3be9e58310e264ac7"
   integrity sha512-I+hghdfZb/hCEoy6trBX8kZYs4Y5YWqoaC0iJn/5hC0AYCIb9cPznmNUTdH8SA/uiv/2cjci1OoHx6hwMZgXmQ==
@@ -1609,7 +1609,7 @@
     vue-docgen-api "^4.1.0"
     vue-docgen-loader "^1.3.0-beta.0"
 
-"@storybook/addon-info@^5.3.0-beta.13":
+"@storybook/addon-info@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-info/-/addon-info-5.3.0-rc.12.tgz#f36eb92a442fdfb8a8b712d5464b3fb9c62f877c"
   integrity sha512-NM7JkG+ksBZaJnvDvHnc3OMbwYzaBvuWFcknNYZ5glgw0Y4G76eUYlFqI9uLOoBptU+Z+5nAFfHyXLNmtF1X5Q==
@@ -1630,7 +1630,7 @@
     react-lifecycles-compat "^3.0.4"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@^5.3.0-beta.13":
+"@storybook/addon-links@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-5.3.0-rc.12.tgz#ea075d46932f1721a96cb76c6cfb432460089980"
   integrity sha512-El0YnwXqxTj+7dTI8anGbVQkZZxwQSRIAadSpxZo65jOkqXcstKGTRZGocrEzBrujUydi2/smp8AYl+D3kl3Jw==
@@ -1646,7 +1646,7 @@
     qs "^6.6.0"
     ts-dedent "^1.1.0"
 
-"@storybook/addons@5.3.0-rc.12", "@storybook/addons@^5.3.0-beta.13":
+"@storybook/addons@5.3.0-rc.12", "@storybook/addons@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-5.3.0-rc.12.tgz#c340927fe0daae306a18684d592e6419b6816583"
   integrity sha512-sWAbWUBgHsgr/EY7OKIfGV+tlFymQNQJwkN4axf3ERFmCRja+POwdjGge3PmRr2gAZ0jeKg6gkIjaGWklI8/Iw==
@@ -1868,7 +1868,7 @@
   dependencies:
     core-js "^3.0.1"
 
-"@storybook/react@^5.3.0-beta.13":
+"@storybook/react@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/react/-/react-5.3.0-rc.12.tgz#92e2ef8694e4ea709bdda1b4e3bbe424cc3c9463"
   integrity sha512-oMVXjlRNqMyhrKhsaP1bdBTfYeuYTds0KTfDf36mD9H7p7HKkC64KEhKbtCQyxItbHtw72+SYd3i+DSdomC1BA==
@@ -1926,7 +1926,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/theming@5.3.0-rc.12", "@storybook/theming@^5.3.0-beta.13":
+"@storybook/theming@5.3.0-rc.12", "@storybook/theming@^5.3.0-rc.12":
   version "5.3.0-rc.12"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-5.3.0-rc.12.tgz#9dc5b8905f4272aab7c3192de6be068c53259095"
   integrity sha512-EWG3TzSq5uFrZPKPBXuyl8nDMMghqG7nzArZvCCeCavHWkPmf1AzOGghtmu/JlZCy11T8Qv+2m7XycZYSDCzRQ==
