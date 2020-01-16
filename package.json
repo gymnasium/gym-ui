@@ -50,7 +50,7 @@
     "@storybook/addon-backgrounds": "^5.3.3",
     "@storybook/addon-docs": "^5.3.3",
     "@storybook/addon-info": "^5.3.3",
-    "@storybook/addon-links": "^5.3.3",
+    "@storybook/addon-links": "^5.3.4",
     "@storybook/addons": "^5.3.3",
     "@storybook/react": "^5.3.3",
     "@storybook/theming": "^5.3.3",
