@@ -51,7 +51,7 @@
     "@storybook/addon-docs": "^5.3.6",
     "@storybook/addon-info": "^5.3.6",
     "@storybook/addon-links": "^5.3.6",
-    "@storybook/addons": "^5.3.6",
+    "@storybook/addons": "^5.3.12",
     "@storybook/react": "^5.3.6",
     "@storybook/theming": "^5.3.6",
     "@types/node": "^13.1.6",
