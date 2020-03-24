@@ -48,7 +48,7 @@ export const withStrongTitleExtraContentColorOverride = (): React.ReactElement =
         <div className="card-main equal-h">
           <img
             alt="Erin Young of UX Slide"
-            src="https://gymcms.xyz/img/webinars/featured-webinar/prototyping-as-process-paravel-slide.png"
+            src="https://thegymcms.com/img/webinars/featured-webinar/prototyping-as-process-paravel-slide.png"
             width="100%"
           />
           <H2>
@@ -95,7 +95,7 @@ export const withNormalTitleAndNoExtra = (): React.ReactElement => {
             <div style={{ textAlign: 'center' }}>
               <img
                 alt="Modern Web Design"
-                srcSet="https://gymcms.xyz/img/course-artwork/svg/gym-107.svg"
+                srcSet="https://thegymcms.com/img/course-artwork/svg/gym-107.svg"
                 src="https://thegymnasium.com/c4x/GYM/107/asset/gym-107.png"
                 width="256"
               />

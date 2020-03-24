@@ -50,7 +50,7 @@ const Button: React.FunctionComponent<Props> = ({
 }: Props): React.ReactElement => {
   const style = css`
     text-decoration: none;
-    font: bold 1.2rem/1 ${typeface.text};
+    font: bold 1.2rem/1 ${typeface.title};
     background-color: ${color.orange};
     color: ${color.white};
     border: 0;

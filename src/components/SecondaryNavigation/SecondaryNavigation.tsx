@@ -24,7 +24,7 @@ const SecondaryNavigation: React.FunctionComponent<Props> = ({
 }: Props): React.ReactElement => {
   const leftContent = (
     <Link css={logoLinkStyle} to="/">
-      <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+      <GymLogo src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg" />
     </Link>
   );
   const rightContent = (
