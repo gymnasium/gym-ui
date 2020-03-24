@@ -53,11 +53,11 @@ const Card: React.FunctionComponent<Props> = ({
     /* Separator */
     > *:not(:first-child) {
       border-left: ${showSeparators &&
-        !isVertical &&
-        `2px dashed ${color.grey.lightPageBackground}`};
+      !isVertical &&
+      `2px dashed ${color.grey.lightPageBackground}`};
       border-top: ${showSeparators &&
-        isVertical &&
-        `2px dashed ${color.grey.lightPageBackground}`};
+      isVertical &&
+      `2px dashed ${color.grey.lightPageBackground}`};
     }
   `;
 
