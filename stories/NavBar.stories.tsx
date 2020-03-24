@@ -44,7 +44,7 @@ export const rightWithLogoOnLeft = (): React.ReactElement => {
     <NavBar
       rightContent={navElements}
       leftContent={
-        <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+        <GymLogo src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg" />
       }
     />
   );
@@ -60,7 +60,7 @@ export const darkGrayBackground = (): React.ReactElement => {
       backgroundColor={color.grey.dark}
       rightContent={navElements}
       leftContent={
-        <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+        <GymLogo src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg" />
       }
     />
   );

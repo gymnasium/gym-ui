@@ -20,7 +20,7 @@ export default {
 };
 
 export const defaultStory = (): React.ReactElement => (
-  <GymLogo src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg" />
+  <GymLogo src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg" />
 );
 
 defaultStory.story = {
@@ -29,7 +29,7 @@ defaultStory.story = {
 
 export const withDimensionsOverride = (): React.ReactElement => (
   <GymLogo
-    src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg"
+    src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg"
     width="300px"
     height="50px"
   />
@@ -41,7 +41,7 @@ withDimensionsOverride.story = {
 
 export const backgroundColorOverride = (): React.ReactElement => (
   <GymLogo
-    src="https://gymcms.xyz/img/brand/gymnasium-logo-white.svg"
+    src="https://thegymcms.com/img/brand/gymnasium-logo-white.svg"
     backgroundColor={color.black}
   />
 );

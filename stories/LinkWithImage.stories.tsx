@@ -20,8 +20,8 @@ export const defaultStory = (): React.ReactElement => (
       to="https://thegymnasium.com/courses/GYM/103/0/about"
       title="Get Started"
       imageAlt="UX Fundamentals"
-      imageSrcSet="https://gymcms.xyz/img/course-artwork/svg/gym-103.svg"
-      imageSrc="https://gymcms.xyz/img/course-artwork/png/gym-103.png"
+      imageSrcSet="https://thegymcms.com/img/course-artwork/svg/gym-103.svg"
+      imageSrc="https://thegymcms.com/img/course-artwork/png/gym-103.png"
       imageBackgroundColor={color.teal}
     >
       UX Fundamentals
@@ -30,7 +30,7 @@ export const defaultStory = (): React.ReactElement => (
       to="https://thegymnasium.com/courses/GYM/105/0/about"
       title="Web &amp; Mobile"
       imageAlt="Web &amp; Mobile"
-      imageSrc="https://gymcms.xyz/img/course-artwork/svg/gym-105.svg"
+      imageSrc="https://thegymcms.com/img/course-artwork/svg/gym-105.svg"
       imageBackgroundColor={color.green}
     >
       Writing for Web &amp; Mobile
