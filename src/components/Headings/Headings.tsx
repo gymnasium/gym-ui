@@ -14,7 +14,7 @@ const H1: React.FunctionComponent<Props> = ({
   color = 'inherit',
 }: Props): React.ReactElement => {
   const style = css`
-    font: 900 1.75rem/1.2 ${typeface.title};
+    font: 900 2.25rem/1.2 ${typeface.title};
     color: ${color};
     text-align: ${textAlign};
     text-transform: uppercase;
@@ -30,7 +30,7 @@ const H2: React.FunctionComponent<Props> = ({
   color = 'inherit',
 }: Props): React.ReactElement => {
   const style = css`
-    font: 900 1.4rem/1.3 ${typeface.title};
+    font: 900 1.65rem/1.3 ${typeface.title};
     color: ${color};
     text-align: ${textAlign};
     text-transform: uppercase;
@@ -45,7 +45,7 @@ const H3: React.FunctionComponent<Props> = ({
   color = 'inherit',
 }: Props): React.ReactElement => {
   const style = css`
-    font: bold 1.2rem/1.4 ${typeface.title};
+    font: bold 1.45rem/1.4 ${typeface.title};
     color: ${color};
     text-align: ${textAlign};
     text-transform: capitalize;
@@ -60,7 +60,7 @@ const H4: React.FunctionComponent<Props> = ({
   color = 'inherit',
 }: Props): React.ReactElement => {
   const style = css`
-    font: bold 1rem/1.4 ${typeface.title};
+    font: bold 1.25rem/1.4 ${typeface.title};
     color: ${color};
     text-align: ${textAlign};
     text-transform: capitalize;

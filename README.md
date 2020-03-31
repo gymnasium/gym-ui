@@ -7,7 +7,7 @@ A React UI Library for [Gymnasium](https://thegymnasium.com)
 
 ## Note about fonts
 
-This library uses a licensed font called `brandon-grotesque`.  
+This library uses a licensed font called `Brandon Grotesque`.  
 If you don't have this font, the UI components will fall back to use Google font called `Josefin Sans` which is close enough.
 
 To make `Josefin Sans` avaiable, insert the following into the <head> of your HTML document:
