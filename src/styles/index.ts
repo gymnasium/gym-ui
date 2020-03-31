@@ -1,7 +1,7 @@
 export const color = {
   /* colors */
   trueblack: '#000',
-  orange: '#f8971d',
+  orange: '#ff5f14',
   black: '#222222',
   white: '#ffffff',
   red: '#d73158',
@@ -33,6 +33,6 @@ export const color = {
 export const typeface = {
   /* typefaces */
   title:
-    'brandon-grotesque, Josefin Sans, Helvetica Neue, Helvetica, sans-serif',
+    '"Brandon Grotesque", brandon-grotesque, Josefin Sans, Helvetica Neue, Helvetica, sans-serif',
   text: 'Helvetica Neue, Helvetica, sans-serif',
 };
