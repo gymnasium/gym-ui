@@ -1,9 +1,10 @@
 export const color = {
   /* colors */
-  trueblack: '#000',
   orange: '#ff5f14',
+  trueblack: '#000',
   black: '#222222',
   white: '#ffffff',
+  blue: '#0065de',
   red: '#d73158',
   purple: '#6f519a',
   green: '#4e965f',
