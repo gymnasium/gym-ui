@@ -4,7 +4,7 @@ import { color, typeface } from '../../styles';
 
 const baseStyle = css`
   text-decoration: none;
-  color: ${color.orange};
+  color: ${color.blue};
   background-color: transparent;
   font-family: ${typeface.text};
   transition: all 0.1s linear 0s;
@@ -17,20 +17,20 @@ const darkStyle = css`
   color: ${color.grey[800]};
   :hover {
     border-bottom: 0;
-    color: ${color.orange};
+    color: ${color.blue};
   }
 `;
 
 const lightStyle = css`
-  color: ${color.grey.lightPageBackground};
+  color: ${color.orange};
   :hover {
     border: 0;
-    color: ${color.orange};
+    text-decoration: underline;
   }
 `;
 
 const activeStyle = css`
-  color: ${color.orange};
+  color: ${color.blue};
 `;
 
 interface Props {

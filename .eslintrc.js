@@ -8,6 +8,9 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
   ],
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: './tsconfig.json',
+  },
   plugins: ['jsx-a11y', '@typescript-eslint', 'prettier', 'emotion'],
   settings: {
     'import/parsers': {
@@ -21,7 +24,6 @@ module.exports = {
   },
   rules: {
     'emotion/jsx-import': 'error',
-
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
