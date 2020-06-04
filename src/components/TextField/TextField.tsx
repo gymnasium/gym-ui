@@ -84,6 +84,7 @@ interface Props {
    * const [userName, setUserName] = useState(initialValue)
    * Then pass `setUserName` to this parameter
    */
+  // eslint-disable-next-line @typescript-eslint/ban-types
   valueSetter: Function;
   /** Input is required */
   isRequired?: boolean;
