@@ -43,6 +43,7 @@ const GymLogo: React.FunctionComponent<Props> = ({
         width={width}
         height={height}
         role="heading"
+        aria-level={0}
       />
     </div>
   );
