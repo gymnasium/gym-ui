@@ -1,4 +1,6 @@
 /** @jsx jsx */
+import PropTypes from 'prop-types';
+
 import { jsx, css } from '@emotion/core';
 import { color, typeface } from '../../styles';
 
@@ -94,6 +96,10 @@ const Button: React.FunctionComponent<Props> = ({
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  onClick: PropTypes.func,
 };
 
 export default Button;

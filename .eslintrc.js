@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     'emotion/jsx-import': 'error',
+    'react/require-default-props': [0],
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
